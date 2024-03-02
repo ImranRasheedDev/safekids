@@ -1,0 +1,162 @@
+body{
+  background: url(../../dist/images/bg-banner-home.jpg);
+  background-repeat: no-repeat;
+}
+/* BANNER */
+section#banner-how-it-works-privacy { 
+}
+img.img-banner {
+    margin: 1.5rem 0 0 -9.5rem;
+}
+.box-banner {
+    padding: 18rem 5rem 5rem 0rem;
+    width: 100%;
+}
+h1.banner-how-it-works-privacy {
+    font-size: 90px;
+    line-height: 100%;
+    font-weight: 800;
+    font-family: 'gellixextrabold'!important;
+}
+p.banner-home {
+  font-size: 24px;
+  line-height: 36px;
+  width: 100%;
+  padding: 2rem 0 1.5rem;
+  font-family: 'GT Walsheim Pro';
+}
+/* BANNER */
+
+/* SESSION CONTENT HOW IT WORKS PRIVACY 1 */
+section#session-content-how-it-works-privacy1 {
+  padding: 0rem 0 4rem;
+  text-align: center;
+}
+img.img-session-content-how-it-works-privacy1 {
+  width: auto;
+}
+/* SESSION CONTENT HOW IT WORKS PRIVACY 1 */
+
+/* SESSION CONTENT HOW IT WORKS PRIVACY 2 */
+section#session-content-how-it-works-privacy2 {
+  padding: 4rem 0 4rem;
+  text-align: center;
+}
+h2.session-content-how-it-works-privacy2 {
+  font-size: 100px;
+  line-height: 78px;
+  font-weight: 800;
+  font-family: 'gellixextrabold'!important;
+  padding-bottom: 8rem;
+}
+.check-point2 {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-image: url(../../dist/images/how-it-works-privacy/check-point2.svg);
+  background-size: cover;
+  mask-image: url(../../dist/images/how-it-works-privacy/check-point2.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  margin-left: 0.3rem;
+}
+img.icon-number-how-it-works {
+  margin: -24% 25% 0%;
+}
+.box-how-it-works2 {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 24px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 0rem 2rem 2rem 2rem;
+  min-height: 422px;
+}
+h6.session-content-how-it-works-privacy2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+  padding-bottom: 1rem;
+}
+
+/* SESSION CONTENT HOW IT WORKS PRIVACY 2 */
+
+/* SESSION CONTENT HOW IT WORKS PRIVACY 3 */
+section#session-content-how-it-works-privacy3 {
+  padding: 0rem 0 3rem;
+}
+.box-session-content-how-it-works-privacy3 {
+  padding: 5rem 0rem 5rem 3rem;
+}
+h2.session-content-how-it-works-privacy3 {
+  font-size: 60px;
+  line-height: 64px;
+  font-weight: 800;
+  font-family: 'gellixextrabold'!important;
+  padding: 10rem 6rem 3rem 0;
+}
+p.session-content-how-it-works-privacy3 {
+  font-size: 24px;
+  line-height: 36px;
+  padding: 2rem 0rem 2rem 0;
+}
+img.img-content.img1 {
+  margin-left: -16rem;
+}
+p.checklist {
+  padding-left: 2.7rem;
+  transition: 0.5s;
+  margin-bottom: 1.2rem;
+}
+p.checklist::before {
+  content: url(../../dist/images/how-it-works-privacy/dot-point.svg);
+  display: block;
+  position: absolute;
+  margin-left: -2.5rem;
+  transition: 0.5s;
+  margin-top: 0.1rem;
+}
+/* SESSION CONTENT HOW IT WORKS PRIVACY 3 */
+
+/* SESSION CONTENT HOW IT WORKS PRIVACY 4 */
+section#session-content-how-it-works-privacy4 {
+  padding: 4rem 0 0rem;
+  text-align: center;
+}
+h2.session-content-how-it-works-privacy4 {
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 800;
+  font-family: 'gellixextrabold'!important;
+  padding: 0rem 20rem 4rem;
+}
+.box-how-it-works4 {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 24px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 4rem 6rem 3rem 6rem;
+  /* min-height: 422px; */
+  text-align: left;
+  width: 600px;
+  margin: 0 4.5rem;
+}
+h6.session-content-how-it-works-privacy4 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+  padding-bottom: 1rem;
+}
+img.icon-floating-box {
+  margin: 9% 0 0 -10.5rem;
+  position: absolute;
+}
+/* SESSION CONTENT HOW IT WORKS PRIVACY 4 */
+
+/* SESSION CONTENT HOW IT WORKS PRIVACY 5 */
+section#session-content-how-it-works-privacy5 {
+  padding: 20rem 0 15rem;
+  background: url(../../dist/images/bg-footer.svg);
+  background-size: 104%;
+  background-repeat: no-repeat;
+}
+/* SESSION CONTENT HOW IT WORKS PRIVACY 5 */

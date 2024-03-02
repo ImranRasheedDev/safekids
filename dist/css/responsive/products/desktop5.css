@@ -1,0 +1,25 @@
+/* 2560px - 9999px */
+@media (min-width: 2560px) and (max-width: 9999px) {
+
+/* SESSION CONTENT PRODUCTS 1 */
+
+/* SESSION CONTENT PRODUCTS 1 */
+
+/* SESSION CONTENT PRODUCTS 2 */
+
+/* SESSION CONTENT PRODUCTS 2 */
+
+/* SESSION CONTENT PRODUCTS 3 */
+
+/* SESSION CONTENT PRODUCTS 3 */
+
+/* SESSION CONTENT PRODUCTS 4 */
+section#session-content-products4 {
+    padding: 20rem 0 30rem;
+    background: url(../../../../dist/images/bg-footer.svg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+/* SESSION CONTENT PRODUCTS 4 */
+}

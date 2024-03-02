@@ -1,0 +1,279 @@
+/* SESSION CONTENT PRODUCTS 1 */
+section#session-content-products1 {
+  padding: 10rem 0 5rem;
+  text-align: center;
+}
+h1.session-content-products1 {
+    font-size: 100px;
+    line-height: 100%;
+    font-weight: 800;
+    font-family: 'gellixextrabold'!important;
+}
+h2.session-content-products1 {
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 800;
+  font-family: 'gellixextrabold'!important;
+  padding: 0.5rem 0rem 1rem 0;
+}
+.check-point {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../dist/images/check-point.svg);
+  background-size: cover;
+  mask-image: url(../../dist/images/check-point.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  margin-left: 0.3rem;
+}
+img.product-icon1 {
+  float: left;
+}
+.box-number-sk {
+  text-align: left;
+  padding: 2.5rem 7.5rem 4.5rem 13.5rem;
+}
+li.number {
+  list-style: auto;
+}
+.box-products1 {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 24px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 0rem 2rem 0rem 2rem;
+  height: 225px;
+  width: 390px;
+  margin: 0 auto;
+  position: relative;
+}
+img.icon-check {
+  margin: -16% 25% 0%;
+}
+h5.color1-session-content-products1 {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 100%;
+  color: #FF2F4E;
+  margin-top: -1rem;
+}
+span.per-info {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222224;
+}
+p.products1 {
+  font-size: 16px;
+  line-height: 24px;
+  opacity: 0.5;
+  margin-bottom: -1rem;
+}
+button.btn.small2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+  margin: 0;
+  background: linear-gradient(84.93deg, #FF2F4E 13.42%, #FF5E76 144.26%);
+  box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  transition: 0.5s;
+  width: auto;
+}
+button.btn.small2:hover {
+  transition: 0.5s;
+  background: linear-gradient(79.04deg, #FF5E76 8.46%, #FF2F4E 202.45%);
+  transition: 0.2s;
+}
+.border-btn-small2 {
+  margin-top: 15%;
+}
+
+h5.color2-session-content-products1 {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 100%;
+  color: #4DCC8F;
+  margin-top: -1rem;
+}
+button.btn.small3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+  margin: 0;
+  background: linear-gradient(84.93deg, #4BC58A 13.42%, #69d39f 144.26%);
+  box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  transition: 0.5s;
+  width: auto;
+}
+button.btn.small3:hover {
+  transition: 0.5s;
+  background: linear-gradient(79.04deg, #69d39f 8.46%, #4BC58A 202.45%);
+  transition: 0.2s;
+}
+.border-btn-small3 {
+  margin-top: 15%;
+}
+button.btn.small4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+  margin: 0;
+  background: linear-gradient(84.93deg, #765FEF 13.42%, #9d8bf3 144.26%);
+  box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  transition: 0.5s;
+  width: auto;
+}
+button.btn.small4:hover {
+  transition: 0.5s;
+  background: linear-gradient(79.04deg, #9d8bf3 8.46%, #765FEF 202.45%);
+  transition: 0.2s;
+}
+.border-btn-small4 {
+  margin-top: 15%;
+}
+.available-apps {
+  padding-top: 5rem;
+}
+p.available {
+  opacity: 0.5;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+img.bg-icon-btn {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+/* SESSION CONTENT PRODUCTS 1 */
+
+/* SESSION CONTENT PRODUCTS 2 */
+section#session-content-products2 {
+    padding: 5rem 0 5rem;
+    text-align: center;
+}
+.testimonial {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 100%;
+  text-align: center;
+  color: #222224;
+  padding: 2rem 15rem 2rem;
+}
+.testimonial-name {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  color: #FF2F4E;
+  padding: 0.5rem 0;
+}
+.testimonial-info {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #222224;
+  opacity: 0.5;
+  padding-bottom: 2rem;
+}
+.slick-slide img{
+  margin: 0 auto;
+}
+.slider-session-content-products2-nav {
+  margin-top: 20px;
+}
+.slider-session-content-products2-nav .slick-slide {
+  margin: 30px 5px;
+  transition: 0.2s;
+}
+.slider-session-content-products2-nav .slick-slide img {
+  transition: 0.2s;
+  cursor: pointer;
+  width: 30%;
+}
+.slider-session-content-products2-nav-item.slick-slide.slick-current.slick-active{
+  margin: 15px 5px;
+  transition: 0.2s;
+}
+.slider-session-content-products2-nav-item.slick-slide.slick-current.slick-active img {
+  width: 40%;
+  border: #FF2F4E 5px solid;
+  border-radius: 500px;
+}
+.slider-session-content-products2-nav .slick-center img {
+  transform: scale(1.2);
+}
+/* SESSION CONTENT PRODUCTS 2 */
+
+/* SESSION CONTENT PRODUCTS 3 */
+section#session-content-products3 {
+  padding: 5rem 0 0rem;
+  text-align: center;
+}
+.box-products3 {
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 24px 27px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  padding: 3rem 3rem 3.5rem 7rem;
+  text-align: left;
+  width: 610px;
+  margin: 0 4.5rem 2rem;
+}
+img.icon-floating-box {
+  margin: 0% 0 0 -13.5rem;
+  position: absolute;
+}
+p.products3.color-green {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  color: #4BC58A;
+}
+p.products3.color-purple {
+  font-family: 'Gellix';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 35px;
+  color: #765FEF;
+}
+.box-products3 .border-btn-small3, .box-products3 .border-btn-small4 {
+  margin-top: 1rem;
+}
+/* SESSION CONTENT PRODUCTS 3 */
+
+/* SESSION CONTENT PRODUCTS 4 */
+section#session-content-products4 {
+  padding: 20rem 0 15rem;
+  background: url(../../dist/images/bg-footer.svg);
+  background-size: 104%;
+  background-repeat: no-repeat;
+}
+/* SESSION CONTENT PRODUCTS 4 */

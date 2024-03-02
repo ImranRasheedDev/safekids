@@ -1,0 +1,72 @@
+/* 1367px - 1919px */
+@media (min-width: 1367px) and (max-width: 1919px) {
+/* STYLE */ 
+.container, .container-lg, .container-md, .container-sm {
+    /*max-width: 930px;*/
+}
+/*BANNER*/
+h1.banner-about-us {
+    font-size: 80px;
+    line-height: 85%;
+}
+img.img-banner {
+    margin: 1.8rem 0 0 -6.7rem;
+    width: 120%;
+}
+.box-banner {
+    padding: 10rem 5rem 5rem 0rem;
+    width: 100%;
+}
+/*BANNER*/
+
+/* SESSION CONTENT ABOUT US 1 */
+.box-session-content-about-us1 {
+    padding: 5rem 0rem 0rem 3rem;
+}
+h2.session-content-about-us1 {
+    font-size: 80px;
+    line-height: 65px;
+}
+img.img-content.img1 {
+    padding: 3rem 2rem 0 0;
+}
+/* SESSION CONTENT ABOUT US 1 */
+
+/* SESSION CONTENT ABOUT US 2 */
+.pulse-button {
+    margin-top: -25rem;
+}
+/* SESSION CONTENT ABOUT US 2 */
+
+/* SESSION CONTENT ABOUT US 3 */
+img.user-about-us {
+    width: 80%;
+}
+/* SESSION CONTENT ABOUT US 3 */
+
+/* SESSION CONTENT ABOUT US 4 */
+
+/* SESSION CONTENT ABOUT US 4 */
+
+/* SESSION CONTENT ABOUT US 5 */
+
+/* SESSION CONTENT ABOUT US 5 */
+
+/* SESSION CONTENT ABOUT US 6 */
+section#session-content-about-us6 {
+    padding: 18rem 0 15rem;
+}
+.box-session-content-about-us6{
+    padding: 5rem 15rem 4rem;
+}
+/* SESSION CONTENT ABOUT US 6 */
+
+/* FOOTER */
+div#footer{
+    padding: 0 6rem;
+}
+.copyright {
+    padding-top: 2rem;
+}
+/* FOOTER */
+}

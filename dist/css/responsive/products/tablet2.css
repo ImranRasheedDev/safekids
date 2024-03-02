@@ -1,0 +1,113 @@
+/* 834px - 991px */
+@media (min-width: 834px) and (max-width: 991px) {
+.mobile {
+        display: block;
+}
+/* STYLE */ 
+body{
+    text-align: left;
+}
+button.btn.small.header-top{
+    font-size: 16px;
+}
+.border-btn-small{
+    max-width: 100%;
+}
+.navbar-light .navbar-nav .nav-link{
+    font-size: 18px;
+    padding: 30px 10px 20px!important;
+}
+
+/* SESSION CONTENT PRODUCTS 1 */
+section#session-content-products1 {
+    padding: 6rem 0 3rem;
+}
+h1.session-content-products1 {
+    font-size: 90px;
+}
+h2.session-content-products1 {
+    padding: 0.5rem 0rem 0rem 0;
+}
+img.product-icon1 {
+    width: 28%;
+}
+img.icon-check {
+    margin: -10% 25% 0%;
+}
+.box-number-sk {
+    padding: 2.5rem 0rem 4.5rem 11.5rem;
+}
+.box-products1{
+    margin: 0 auto 6rem;
+    height: 245px;
+}
+.available-apps {
+    padding-top: 0rem;
+    margin-top: 0rem;
+}
+/* SESSION CONTENT PRODUCTS 1 */
+
+/* SESSION CONTENT PRODUCTS 2 */
+section#session-content-products2 {
+    padding: 3rem 0 3rem;
+}
+.testimonial{
+    padding: 1rem 0rem 2rem;
+    font-size: 35px;
+}
+.slider-session-content-products2-nav .slick-slide img{
+    width: 40%;
+}
+.slider-session-content-products2-nav-item.slick-slide.slick-current.slick-active img {
+    width: 60%;
+}
+/* SESSION CONTENT PRODUCTS 2 */
+
+/* SESSION CONTENT PRODUCTS 3 */
+section#session-content-products3 {
+    padding: 5rem 0 3rem;
+}
+.box-products3 {
+    padding: 3rem 1rem 3rem 1rem;
+    /* width: 100%; */
+    margin: 0 auto 6rem;
+    text-align: center;
+}
+img.icon-floating-box {
+    margin: -22% 0 0 0rem;
+    position: relative;
+    float: none;
+    width: 30%;
+}
+img.img-content.img-products3 {
+    width: 70%;
+    margin: -4rem 0 0;
+}
+p.products3.color-green, p.products3.color-purple{
+    margin-bottom: 2rem;
+    padding: 0 3rem;
+}
+/* SESSION CONTENT PRODUCTS 3 */
+
+/* SESSION CONTENT PRODUCTS 4 */
+section#session-content-products4 {
+    padding: 0rem 0 30rem;
+    background: url(../../../../dist/images/mobile/bg-footer-mobile.svg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+/* SESSION CONTENT PRODUCTS 4 */
+
+/* FOOTER */
+div#footer{
+    padding: 0 var(--bs-gutter-x,.75rem);
+}
+div#footer .left,div#footer .right {
+    text-align: center;
+}
+.copyright {
+    padding-top: 2rem;
+}
+/* FOOTER */
+}

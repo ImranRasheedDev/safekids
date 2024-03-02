@@ -1,0 +1,530 @@
+#cta-trigger{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+    opacity:0;
+    visibility:hidden;
+    position:fixed;
+    bottom: 16%;
+    right:2.5%
+}
+.flex{
+    background:#0f3352;
+}
+#cta-trigger.show{
+    visibility:visible;
+    animation-name:show-cta;
+    animation-duration:1s;
+    animation-fill-mode:forwards
+}
+#trigger-body{
+    width:142px;
+    height:140px;
+    padding:16px;
+    background:#fff;
+    box-sizing:border-box;
+    font-size:16px;
+    text-align:center;
+    border-radius:0px;
+    transition:.3s all;
+    /*box-shadow:2px 3px 0 0 rgba(0,0,0,.2),4px 7px 0 0 rgba(0,0,0,.15)*/
+    box-shadow: #0000002b 0px 15px 35px;
+}
+#trigger-body strong{
+    font-size:1.25em;
+    font-weight:600;
+    color:#1c1835;
+    line-height:1.35;
+    margin-bottom:5px;
+    display:block
+}
+#trigger-body p{
+    font-size:.85em;
+    font-weight:400;
+    color:#424242;
+    line-height:1;
+    margin-bottom:10px;
+    display:block
+}
+button[open-modal-cta]{
+    width:78px;
+    height:33px;
+    border:none;
+    cursor:pointer;
+    text-transform:uppercase;
+    font-size:1em;
+    font-weight:600;
+    color:#fff;
+    line-height:30px;
+    outline:0;
+    border-radius: 25px 0px 25px 25px;
+    background: rgb(15,45,78);
+    background: linear-gradient(-90deg, rgba(15,45,78,1) 33%, rgba(7,148,154,1) 68%);
+
+}
+button[open-trigger-body]{
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f2d4e;
+    border-radius:50%;
+    border:none;
+    position:relative;
+    margin-top:40px;
+    margin-left:0px;
+    cursor:pointer;
+    outline:0
+}
+button[open-trigger-body]:before{
+    content: "";
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    background: #0f2d4e9d;
+    border-radius: 50%;
+    z-index: -1;
+}
+div#trigger-body:after {
+    top: 61%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: #fff hsla(0,0%,100%,0) hsla(0,0%,100%,0);
+    border-width: 15px;
+    margin-left: -15px;
+}
+button[close-trigger-body]{
+    width:20px;
+    height:20px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    border:none;
+    cursor:pointer;
+    box-shadow:0px 4px 5px 0px rgb(0 0 0 / 15%);
+}
+#modal-cta{
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s all;
+    z-index:-1
+}
+#modal-cta.open{
+    z-index:9999999;
+    opacity:1;
+    visibility:visible
+}
+#modal-overlay{
+    width:100%;
+    height:100%;
+    background:#07949ad4
+}
+#modal-container{
+    width:520px;
+    max-width:90%;
+    height:460px;
+    position:absolute;
+    top:91px;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    background:#fff;
+    box-shadow:40px 40px 40px 0 #043765c7;
+}
+button .fa-clock-o,button .fa-comments-o,button .fa-phone{
+    color:#000
+}
+button[modal-tab]{
+    width:calc(97% / 3);
+    height:48px;
+    border:1px solid #fff;
+    background:#0f3352;
+    font-size:.75em;
+    font-weight:600;
+    color:#fff;
+    text-transform:uppercase;
+    transition:.3s all;
+    border:none!important
+}
+button[modal-tab].active{
+    background:#07949a;
+    color: #fff;
+}
+button.botao2.full {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.modal-content-btns{
+    width:100%;
+    height:calc(100% - 48px);
+    font-size:16px;
+    padding:35px 34px;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 0px;    
+    opacity:0;
+    visibility:hidden;
+    transition:.3s all
+}
+.modal-content-btns.active{
+    opacity:1;
+    visibility:visible
+}
+.modal-content-btns>h2{
+    font-size:30px!important;
+    font-weight:600;
+    color:#424242;
+    display:block;
+    text-align:center;
+    text-transform:uppercase;
+    margin-bottom:-1px!important
+}
+.modal-content-btns>p{
+    font-size:1.25em;
+    font-weight:400;
+    color:#58595b;
+    line-height:1.4;
+    margin-bottom:15px;
+    display:block;
+    text-align:center
+}
+.modal-content-btns label{
+    display:block;
+    margin-bottom:10px;
+    position:relative
+}
+.modal-content-btns label.fa-phone input,.modal-content-btns label.fa-user-circle input{
+    padding-left:37px
+}
+.modal-content-btns label.half{
+    width:48%;
+    display:inline-block
+}
+.modal-content-btns label.half:nth-child(2n){
+    float:right
+}
+.modal-content-btns label.fa-phone:before,.modal-content-btns label.fa-user-circle:before{
+    width:15px;
+    height:15px;
+    margin-right:10px;
+    font-size:1rem;
+    color:#243f6f;
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    left:10px;
+    font-weight:600
+}
+.modal-content-btns input,.modal-content-btns textarea{
+    width:100%;
+    border:1px solid rgb(230, 230, 230);
+    font-size:.875em;
+
+}
+.modal-content-btns input{
+    height:40px;
+    border-radius:5px;
+    padding-left:15px;
+    color: #424242;
+}
+.modal-content-btns textarea{
+    height:75px;
+    border-radius:5px;
+    padding:15px;
+    margin-bottom: 0rem;
+}
+.modal-content-btns .btn-submit{
+    width:100%;
+    height:42px;
+    border:0;
+    border-radius:5px;
+    display:block;
+    font-size:1.25em;
+    font-weight:600;
+    text-transform:uppercase;
+    line-height:42px;
+    text-align:center;
+    margin-bottom:13px;
+    color:#fff;
+    background: rgb(15,45,78);
+    background: linear-gradient(-90deg, rgba(15,45,78,1) 33%, rgba(7,148,154,1) 68%);
+
+}
+.modal-content-btns small{
+    font-size:.875em;
+    font-weight:400;
+    color:#424242;
+    text-align:center;
+    display:block
+}
+.modal-content-btns small span{
+    width: 23px;
+    height: 23px;
+    border-radius:50%;
+    background:#424242;
+    color:#fff;
+    display:inline-block;
+    text-align:center
+}
+@media screen and (max-width:991px){
+    #cta-trigger{
+        display:none
+    }
+    #modal-container{
+        height:480px
+    }
+    .modal-content-btns{
+        padding:30px 20px
+    }
+}
+@media screen and (min-width:991px){
+    #whats-cta{
+        width:47px;
+        height:47px;
+        background:#01c854;
+        border-radius:50%;
+        z-index:999;
+        opacity:0;
+        visibility:hidden;
+        font-size:1.875rem;
+        color:#fff;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:fixed;
+        right:5%;
+        text-decoration: none!important;
+        bottom:56%
+    }
+    #whats-cta .fa-whatsapp{
+        font-size:33px;
+    }
+    #whats-cta:before{
+        content:"";
+        width:calc(100% + 14px);
+        height:calc(100% + 14px);
+        position:absolute;
+        top:-7px;
+        left:-7px;
+        z-index:-1;
+        background:rgba(1,200,84,.3);
+        border-radius:50%;
+        animation-name:whats-pulse;
+        animation-duration:2s;
+        animation-iteration-count:infinite
+    }
+    #whats-cta.show{
+        visibility:visible;
+        animation-name:show-cta;
+        animation-duration:1s;
+        animation-fill-mode:forwards
+    }
+}
+@media screen and (min-width:991px){
+    #mobile-cta{
+        display:none
+    }
+}
+@media screen and (max-width:990px){
+    #cta-trigger{
+        bottom:15%
+    }
+    #mobile-cta{
+        width:100%;
+        height:42px;
+        background:#21325d;
+        position:fixed;
+        bottom:0;
+        left:0;
+        z-index:999
+    }
+    #mobile-cta:before{
+        content:"";
+        width:100%;
+        height:5px;
+        position:absolute;
+        bottom:100%;
+        left:0;
+        background:#eeeeee
+    }
+    #mobile-cta .wrap{
+        display:grid;
+        grid-template-columns:1fr 2fr 1fr;
+        align-items:center;
+        justify-content:center;
+        text-align:center
+    }
+    #mobile-cta div a,#mobile-cta div button{
+        font-size:16px
+    }
+    #mobile-cta #btn-whatsapp i{
+        margin-top:10px
+    }
+    #mobile-cta .column-whats{
+        background: #25d366
+    }
+    a#btn-whatsapp{
+        top: 0.2rem;
+    }
+    #mobile-cta #btn-whatsapp i:before{
+        font-size:24px
+    }
+    .column-ligar{
+        border-right:#fff 1px solid;
+    }
+    #btn-whatsapp{
+        width:42px;
+        position:relative;
+        font-size:1.75rem;
+        color:#fff;
+        line-height:42px
+    }
+    .whats-col{
+        background:#01c854
+    }
+    #btn-whatsapp:before{
+        content:"";
+        width:300px;
+        height:42px;
+        position:absolute;
+        top:0;
+        right:100%;
+    }
+    .buttons-mob{
+        background-color:#d5ceea
+    }
+    #btn-ligar,#btn-open-modal{
+        font-size:.75rem;
+        font-weight:700;
+        color:#fff;
+        text-align:center;
+        line-height:42px;
+        text-transform:uppercase
+    }
+    #btn-ligar:after{
+        content:"";
+        width:1px;
+        height:35px;
+        background:#bbb7c9;
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        margin:auto
+    }
+    #btn-open-modal{
+        width:192px;
+        height:45px;
+        border:none;
+        background:0 0
+    }
+}
+@-moz-keyframes whats-pulse{
+    0%{
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(.9)
+    }
+    100%{
+        transform:scale(1)
+    }
+}
+@-webkit-keyframes whats-pulse{
+    0%{
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(.9)
+    }
+    100%{
+        transform:scale(1)
+    }
+}
+@-o-keyframes whats-pulse{
+    0%{
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(.9)
+    }
+    100%{
+        transform:scale(1)
+    }
+}
+@keyframes whats-pulse{
+    0%{
+        transform:scale(1)
+    }
+    50%{
+        transform:scale(.9)
+    }
+    100%{
+        transform:scale(1)
+    }
+}
+@-moz-keyframes show-cta{
+    0%{
+        transform:translateY(0);
+        opacity:0
+    }
+    100%{
+        transform:translateY(-30px);
+        opacity:1
+    }
+}
+@-webkit-keyframes show-cta{
+    0%{
+        transform:translateY(0);
+        opacity:0
+    }
+    100%{
+        transform:translateY(-30px);
+        opacity:1
+    }
+}
+@-o-keyframes show-cta{
+    0%{
+        transform:translateY(0);
+        opacity:0
+    }
+    100%{
+        transform:translateY(-30px);
+        opacity:1
+    }
+}
+@keyframes show-cta{
+    0%{
+        transform:translateY(0);
+        opacity:0
+    }
+    100%{
+        transform:translateY(-30px);
+        opacity:1
+    }
+}
