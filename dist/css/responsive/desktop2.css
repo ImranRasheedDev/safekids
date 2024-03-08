@@ -1,145 +1,148 @@
 /* 1281px - 1366px */
 @media (min-width: 1281px) and (max-width: 1366px) {
-/* STYLE */ 
-.container, .container-lg, .container-md, .container-sm {
+  /* STYLE */
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
     max-width: 1300px;
-}
-/* BANNER HOME */
-img.img-banner {
+  }
+  /* BANNER HOME */
+  img.img-banner {
     margin: 1.5rem 0 0 -7rem;
     width: 114%;
-}
-.box-banner {
+  }
+  .box-banner {
     padding: 8rem 7rem 5rem 0rem;
-}
-h1.banner-home {
+  }
+
+  h1.banner-home {
     font-size: 120px;
     line-height: 106px;
-}
-.beyond-icon{
+  }
+  .beyond-icon {
     width: 131px;
     height: 60px;
-}
-.beyond-icon::after{
+  }
+  .beyond-icon::after {
     width: 40px;
     height: 40px;
     top: 10px;
     left: 9px;
-}
-/* BANNER HOME */
+  }
+  /* BANNER HOME */
 
-/* SESSION CONTENT HOME 1 */
-h2.session-content-home1 {
+  /* SESSION CONTENT HOME 1 */
+  h2.session-content-home1 {
     font-size: 90px;
     line-height: 68px;
-}
-.float-box-outside1{
+  }
+  .float-box-outside1 {
     left: 80px;
     top: 960px;
-}
-.float-box-outside2{
+  }
+  .float-box-outside2 {
     left: 400px;
     top: 860px;
-}
-.float-box-outside3{
+  }
+  .float-box-outside3 {
     left: 80px;
     top: 1340px;
-}
-.float-box-outside4{
+  }
+  .float-box-outside4 {
+  }
+  /* SESSION CONTENT HOME 1 */
 
-}
-/* SESSION CONTENT HOME 1 */
-
-/* SESSION CONTENT HOME 2 */
-img.img-content.img-session-content-home2{
+  /* SESSION CONTENT HOME 2 */
+  img.img-content.img-session-content-home2 {
     width: 140%;
-}
-p.session-content-home2{
+  }
+  p.session-content-home2 {
     padding-top: 1rem;
-}
-img.img-content.go-img {
+  }
+  img.img-content.go-img {
     width: 50%;
     padding-top: 4rem;
-}
-img.img-content.stop-img {
+  }
+  img.img-content.stop-img {
     width: 50%;
     padding-top: 4rem;
-}
-/* SESSION CONTENT HOME 2 */
+  }
+  /* SESSION CONTENT HOME 2 */
 
-/* SESSION CONTENT HOME 3 */
-section#session-content-home3{
+  /* SESSION CONTENT HOME 3 */
+  section#session-content-home3 {
     padding: 4rem 0 4rem;
-}
-h2.session-content-home3{
+  }
+  h2.session-content-home3 {
     padding: 14rem 0rem 0rem 0rem;
-}
-.float-box-outside4{
+  }
+  .float-box-outside4 {
     left: 670px;
     top: 2720px;
-}
-.float-box-outside5{
+  }
+  .float-box-outside5 {
     left: 850px;
     top: 3160px;
-}
-/* SESSION CONTENT HOME 3 */
+  }
+  /* SESSION CONTENT HOME 3 */
 
-/* SESSION CONTENT HOME 4 */
-h2.session-content-home4 {
+  /* SESSION CONTENT HOME 4 */
+  h2.session-content-home4 {
     padding: 11rem 5rem 0rem 3rem;
-}
-img.img-content.img1{
+  }
+  img.img-content.img1 {
     padding: 4rem 0rem 0 0;
-}
-.float-box-outside6 {
+  }
+  .float-box-outside6 {
     left: 75px;
     top: 3430px;
-}
-.float-box-outside7 {
+  }
+  .float-box-outside7 {
     left: 420px;
     top: 3960px;
-}
-/* SESSION CONTENT HOME 4 */
+  }
+  /* SESSION CONTENT HOME 4 */
 
-/* SESSION CONTENT HOME 5 */
-section#session-content-home5{
+  /* SESSION CONTENT HOME 5 */
+  section#session-content-home5 {
     padding: 17rem 0 0;
     background-size: 106%;
-}
-h2.session-content-home5{
+  }
+  h2.session-content-home5 {
     padding: 0 10rem 4rem;
-}
-.box-session-content-home5{
+  }
+  .box-session-content-home5 {
     width: 123%;
-}
-img.img-content.img-session-content-home5 {
+  }
+  img.img-content.img-session-content-home5 {
     right: -5rem;
     width: 100%;
     position: relative;
     z-index: 0;
-}
-.col-lg-4.col-sm-12.column-tab-left {
+  }
+  .col-lg-4.col-sm-12.column-tab-left {
     padding-top: 1rem;
-}
-/* SESSION CONTENT HOME 5 */
+  }
+  /* SESSION CONTENT HOME 5 */
 
-/* SESSION CONTENT HOME 6 */
-div#session-content-home6 {
+  /* SESSION CONTENT HOME 6 */
+  div#session-content-home6 {
     padding: 1rem 0 5rem;
-}
-h2.session-content-home6 {
+  }
+  h2.session-content-home6 {
     font-weight: 800;
     font-size: 110px;
     line-height: 100px;
-}
-.column-session-content-home6 {
+  }
+  .column-session-content-home6 {
     padding: 10rem 0rem 0 2rem;
-}
-/* SESSION CONTENT HOME 6 */
+  }
+  /* SESSION CONTENT HOME 6 */
 
-/* FOOTER */
-div#footer{
+  /* FOOTER */
+  div#footer {
     padding: 0 5%;
-}
-/* FOOTER */
+  }
+  /* FOOTER */
 }
