@@ -14,13 +14,13 @@ body {
   overflow-x: hidden;
 }
 
-.container-custom,
-.container-fluid-custom,
-.container-lg-custom,
-.container-md-custom,
-.container-sm-custom,
-.container-xl-custom,
-.container-xxl-custom {
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
   width: 100%;
   padding-left: 12px;
   padding-right: 12px;
@@ -28,56 +28,23 @@ body {
 
 /* MEDIA SCREEN */
 @media (min-width: 1920px) {
-  .container-custom,
-  .container-custom-lg,
-  .container-custom-md,
-  .container-custom-sm,
-  .container-custom-xl,
-  .container-custom-xxl {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
     max-width: 1440px;
   }
 }
 @media (min-width: 1400px) and (max-width: 1919px) {
-  .container-custom,
-  .container-custom-lg,
-  .container-custom-md,
-  .container-custom-sm,
-  .container-custom-xl,
-  .container-custom-xxl {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
     max-width: 1280px;
-  }
-}
-@media (min-width: 0px) and (max-width: 480px) {
-  .mobile {
-    display: block;
-  }
-  .tablet {
-    display: none;
-  }
-  .desktop {
-    display: none;
-  }
-}
-@media (min-width: 481px) and (max-width: 1024px) {
-  .mobile {
-    display: none;
-  }
-  .tablet {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
-}
-@media (min-width: 1025px) and (max-width: 2560px) {
-  .mobile {
-    display: none;
-  }
-  .tablet {
-    display: none;
-  }
-  .desktop {
-    display: block;
   }
 }
 
@@ -737,32 +704,6 @@ h6.session-content-terms-and-conditions {
 
 /* dont remove css */
 
-.beyond-icon {
-  display: inline-block;
-  width: 151px;
-  height: 69px;
-  background-image: url(/dist/images/switche-bg.svg);
-  background-size: cover;
-  mask-image: url(/dist/images/switche-bg.svg);
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  position: relative;
-}
-
-.beyond-icon::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-image: url(/dist/images/switche-dot-green.svg);
-  background-size: cover;
-  position: absolute;
-  top: 9px;
-  left: 13px;
-  animation: dot-animation 5s infinite;
-  transition: background-image 0.1s ease-in-out;
-}
-
 .float-box-outside-two {
   /* position: absolute;
   width: 345px; */
@@ -1049,16 +990,6 @@ p.session-content-home6 {
 }
 
 @media (min-width: 1367px) and (max-width: 1919px) {
-  .beyond-icon {
-    width: 131px;
-    height: 60px;
-  }
-  .beyond-icon::after {
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    left: 9px;
-  }
   .float-box-outside-two {
     left: 400px;
     top: 860px;
@@ -1170,21 +1101,10 @@ p.session-content-home6 {
     margin: 0.5rem 0px !important;
   }
 
-  .beyond-icon {
-    width: 70px;
-    height: 32px;
-  }
-
   .box-banner {
     padding: 7rem 0rem 0rem;
   }
 
-  .beyond-icon::after {
-    width: 24px;
-    height: 24px;
-    top: 4px;
-    left: 3px;
-  }
   .border-btn-small {
     max-width: 100%;
   }
@@ -1249,5 +1169,58 @@ p.session-content-home6 {
   }
   div#footer {
     padding: 0 1rem;
+  }
+}
+
+/* beyond-icon css */
+.beyond-icon {
+  display: inline-block;
+  width: 70px;
+  height: 32px;
+  background-image: url(../../dist/images/switche-bg.svg);
+  background-size: cover;
+  mask-image: url(../../dist/images/switche-bg.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  position: relative;
+}
+
+.beyond-icon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../dist/images/switche-dot-green.svg);
+  background-size: cover;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  animation: dot-animation 5s infinite;
+  transition: background-image 0.1s ease-in-out;
+}
+
+@media (min-width: 640px) {
+  .beyond-icon {
+    width: 92px;
+    height: 42px;
+  }
+  .beyond-icon::after {
+    width: 35px;
+    height: 35px;
+    top: 3px;
+    left: 8px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .beyond-icon {
+    width: 131px;
+    height: 60px;
+  }
+  .beyond-icon::after {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 9px;
   }
 }
