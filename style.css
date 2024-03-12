@@ -21,7 +21,7 @@ body {
 .container-sm,
 .container-xl,
 .container-xxl {
-  width: 100%;
+  width: 100% !important;
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -34,7 +34,7 @@ body {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1440px;
+    max-width: 1440px !important;
   }
 }
 @media (min-width: 1400px) and (max-width: 1919px) {
@@ -44,7 +44,7 @@ body {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1280px;
+    max-width: 1280px !important;
   }
 }
 
@@ -868,6 +868,18 @@ p.session-content-home6 {
 
 .font-gt-walsheim-pro {
   font-family: "GT Walsheim Pro";
+}
+
+.check-point {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../dist/images/check-point.svg);
+  background-size: cover;
+  mask-image: url(../../dist/images/check-point.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  margin-left: 0.3rem;
 }
 
 @keyframes dot-animation {
