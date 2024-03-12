@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
     <title>Welcome to Safe Kids</title>
     <meta name="description" content="">
     <link rel="icon" type="image/x-icon" href="dist/images/favicon.png">
@@ -15,17 +14,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-
     <script src="https://kit.fontawesome.com/be108bf458.js" crossorigin="anonymous"></script>
-
-    <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/smartphones.css">
-    <link rel="stylesheet" type="text/css" href="dist/css/tablets.css"> -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,603 +23,646 @@
         href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/home.css">
-    <link rel="stylesheet" type="text/css" href="dist/css/responsive/mobile0.css"> 0px - 320px | iPhone SE -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/mobile1.css"> -->
-    <!-- 321px - 375px | iPhone13 Mini -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/mobile2.css"> -->
-    <!-- 376px - 414px | iPhone8 Plus, iPhone14 Pro -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/mobile3.css"> -->
-    <!-- 415px - 430px | iPhone13 Pro Max, iPhone14 Pro Max-->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/mobile4.css"> -->
-    <!-- 431px - 743px | Android Samsung S20 FE -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/tablet1.css"> 481px - 833px | iPad mini 8.3 -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/tablet2.css"> 834px - 991px | iPad Pro 11 -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/tablet3.css"> -->
-    <!-- 992px - 1024px | iPad Pro 12.9-->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/desktop1.css"> -->
-    <!-- 1025px - 1280px | Macbook Air -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/desktop2.css"> -->
-    <!-- 1281px - 1366px | Desktop 1366 -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/desktop3.css"> -->
-    <!-- 1367px - 1919px | Desktop 1440 -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/desktop4.css"> -->
-    <!-- 1937px - 2559px | Desktop 2133 -->
-    <!-- <link rel="stylesheet" type="text/css" href="dist/css/responsive/desktop5.css"> -->
-    <!-- 2560px - 9999px | Desktop 2560 -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-        </script> -->
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+
+                // Fade in duration: 1 second 
+                $("#contentWrapper").fadeIn(1000);
+                $(".loading-overlay").fadeOut(1000);
+
+                // Fade out duration: 1 second 
+                // Display loading overlay for 1 second 
+            }, 1000);
+        }); 
+    </script>
 
 </head>
 
 <body>
-    <header>
-        <section class="navigation">
-            <div class="container-custom mx-auto">
-                <nav class="navbar py-[0.5rem]">
-                    <div class="container-custom mx-auto px-4 py-2 flex justify-between items-center">
-                        <a href="index.html">
-                            <img src="dist/images/logo.svg" alt="" />
-                        </a>
-                        <button
-                            class="md:hidden text-center mx-auto mt-0 mb-[1rem] contents text-[#0000008c] border-[#0000001a] py-[0.25rem] px-[0.75rem] text-[1.25rem] leading-none bg-transparent border rounded-[0.25rem]"
-                            aria-controls="navbar-menu" aria-expanded="false" data-collapse-toggle="#navbar-menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none">
-                                <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="#222224" />
-                            </svg>
-                        </button>
-                        <div class="hidden md:flex items-center space-x-4">
-                            <a href="how-it-works-privacy.html"
-                                class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">How it
-                                works</a>
-                            <a href="products.html"
-                                class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">Products</a>
-                            <a href="patents.html"
-                                class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">Patents</a>
-                            <a href="opensource.html"
-                                class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">Opensource</a>
-                            <a href="about-us.html"
-                                class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">About</a>
+    <div class="loading-overlay">
+        <div class="loading-spinner">
+
+        </div>
+    </div>
+
+    <div id="contentWrapper">
+
+        <header>
+            <section class="navigation">
+                <div class="container mx-auto">
+                    <nav class="navbar py-[0.5rem]">
+                        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+                            <a href="index.html">
+                                <img src="dist/images/logo.svg" alt="" />
+                            </a>
+                            <button id="haeder-menu-button"
+                                class="md:hidden text-center mx-auto mt-0 mb-[1rem] contents text-[#0000008c] border-[#0000001a] py-[0.25rem] px-[0.75rem] text-[1.25rem] leading-none bg-transparent border rounded-[0.25rem]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="#222224" />
+                                </svg>
+                            </button>
+                            <div class="hidden md:flex items-center space-x-4">
+                                <a href="how-it-works-privacy.html"
+                                    class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">How it
+                                    works</a>
+                                <a href="products.html"
+                                    class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">Products</a>
+                                <a href="patents.html"
+                                    class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">Patents</a>
+                                <a href="opensource.html"
+                                    class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">Opensource</a>
+                                <a href="about-us.html"
+                                    class="text-gray-800 hover:text-red font-medium px-3 py-2 rounded-md text-sm">About</a>
+                            </div>
+                        </div>
+
+                        <div id="mobile-navigation"
+                            class="md:hidden text-left pb-8 overflow-y-auto  top-full left-0 w-full">
+                            <ul class="space-y-1 px-4 py-2">
+                                <li>
+                                    <a href="how-it-works-privacy.html"
+                                        class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">How
+                                        it works</a>
+                                </li>
+                                <li>
+                                    <a href="products.html"
+                                        class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">Products</a>
+                                </li>
+                                <li>
+                                    <a href="patents.html"
+                                        class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">Patents</a>
+                                </li>
+                                <li>
+                                    <a href="opensource.html"
+                                        class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">Opensource</a>
+                                </li>
+                                <li>
+                                    <a href="about-us.html"
+                                        class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+        </header>
+
+
+        <!-- Banner -->
+
+        <section class="pb-[3rem] lg:pb-[5rem]">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2">
+                        <div
+                            class="pt-[5rem] lg:pt-[7rem] xl:pt-[8rem] xl:pr-[7rem] xl:pb-[5rem] 2xl:pt-[9rem] 2xl:pr-[5rem] 2xl:pb-[5rem] min-[1920px]:pt-[12rem] min-[1920px]:pr-[7rem] min-[1920px]:pb-[5rem] text-center md:text-left">
+                            <h1
+                                class="text-[65px] leading-[55px] sm:text-[85px] sm:leading-[80px] xl:text-[120px] xl:leading-[106px] 2xl:text-[130px] 2xl:leading-[126px]">
+                                Bey<span class="beyond-icon"></span>nd<br><span class="color2">blocking.</span></h1>
+                            <p
+                                class="font-gt-walsheim-pro pb-[2rem] pt-[2rem] px-[1rem] xl:pr-[0] xl:pb-[1.5rem] xl:pl-[0px] text-[18px] leading-[24px] sm:text-[20px] sm:leading-[32px] md:text-[18px] md:leading-[30px] lg:text-[24px] lg:leading-[36px]">
+                                Safe Kids is <a href="opensource">opensource</a> and
+                                intercepts inappropriate content and teaches children how to make safer choices.
+                            </p>
+                            <div class="border-btn-small">
+                                <a href="#" id="play-video" data-toggle="modal" data-target="#video-modal">
+                                    <button class="btn small">
+                                        Why Safe Kids?
+                                        <img src="dist/images/icon-arrow-btn.svg" class="bg-icon-btn inline" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                            <div
+                                class="featured-logos hidden lg:block not-italic font-medium text-lg leading-[45px] xl:leading-[24px] tracking-[0.21em] uppercase pt-[1.5rem]">
+                                Featured in<br>
+                                <img src="dist/images/featured-in-logos.png" alt="" usemap="#image-map">
+                                <map name="image-map">
+                                    <area shape="rect" coords="0,0,135,86"
+                                        href="https://www.fox13news.com/news/teen-creates-app-to-protect-kids-from-social-media-says-total-ban-wont-work"
+                                        alt="FOX 13">
+                                    <area shape="rect" coords="135,0,235,86"
+                                        href="https://www.globenewswire.com/news-release/2022/09/28/2524695/0/en/Safe-Kids-AI-Launches-New-Gmail-Extension-Aimed-At-Helping-Kids-Make-Better-Decisions-Online.html"
+                                        alt="">
+                                    <area shape="rect" coords="235,0,400,86"
+                                        href="https://www.aol.com/news/teen-creates-app-protect-kids-033535236.html"
+                                        alt="">
+                                    <area shape="rect" coords="400,0,900,86"
+                                        href="https://finance.yahoo.com/news/safe-kids-ai-launches-gmail-185100986.html"
+                                        alt="">
+                                    <!-- Add more <area> tags for additional clickable areas -->
+                                </map>
+                            </div>
                         </div>
                     </div>
-
-                    <div id="navbar-menu"
-                        class="md:hidden hidden pb-8 overflow-y-auto bg-gray-100 absolute top-full left-0 w-full">
-                        <ul class="space-y-1 px-4 py-2">
-                            <li>
-                                <a href="how-it-works-privacy.html"
-                                    class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">How
-                                    it works</a>
-                            </li>
-                            <li>
-                                <a href="products.html"
-                                    class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">Products</a>
-                            </li>
-                            <li>
-                                <a href="patents.html"
-                                    class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">Patents</a>
-                            </li>
-                            <li>
-                                <a href="opensource.html"
-                                    class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">Opensource</a>
-                            </li>
-                            <li>
-                                <a href="about-us.html"
-                                    class="text-gray-700 hover:text-indigo-500 block px-3 py-2 rounded-md font-medium">About</a>
-                            </li>
-                        </ul>
+                    <div class="md:w-1/2 md:pl-8">
+                        <img src="dist/images/img-banner-home.png" class="img-banner desktop hidden lg:block" alt="">
+                        <img src="dist/images/mobile/img-banner-home-mobile.png" class="img-banner lg:hidden" alt="">
+                        <div
+                            class="featured-logos lg:hidden not-italic font-medium text-lg leading-[45px] tracking-[0.21em] uppercase pt-[1.5rem]">
+                            Featured in<br>
+                            <img src="dist/images/featured-in-logos.png" class="img-logos" alt="">
+                        </div>
                     </div>
-                </nav>
+                </div>
             </div>
         </section>
-    </header>
 
-    <!-- Banner -->
-    <section id="banner-home" class="py-0 px-0 pb-12">
-        <div class="container-custom mx-auto">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2">
-                    <div class="box-banner md:text-left">
-                        <h1 class="lg:text-9xl text-[65px] leading-[55px] font-bold">Bey<span
-                                class="beyond-icon"></span>nd<br><span class="color2">blocking.</span></h1>
-                        <p class="lg:text-2xl pt-5 pb-3 lg:leading-9 leading-6 text-lg">
-                            Safe Kids is <a href="opensource.html" class="text-blue-500">opensource</a> and intercepts
-                            inappropriate content
-                            and
-                            teaches children how to make safer choices.
-                        </p>
-                        <div class="border-btn-small mt-4">
-                            <a href="#" id="play-video" data-toggle="modal" data-target="#video-modal">
-                                <button
-                                    class="btn small flex items-center justify-center font-semibold text-base leading-7 text-center
-                                    text-white py-[0.5rem] pr-0 pl[1.5rem] md:m-0 mx-auto shadow-[0px 1px 36px rgba(0, 0, 0, 0.07)] rounded-[20px]">
-                                    Why Safe Kids?
-                                    <img src="https://www.safekids.ai/wp-content/themes/safekids/dist/images/icon-arrow-btn.svg"
-                                        class="bg-icon-btn ml-2" alt="">
-                                </button>
-                            </a>
-                        </div>
-                        <div class=" pt-14 text-lg font-medium leading-6 tracking-[0.21em] uppercase hidden md:block">
-                            Featured in<br>
-                            <img src="dist/images/featured-in-logos.png" alt="" usemap="#image-map">
-                            <map name="image-map">
-                                <area shape="rect" coords="0,0,135,86"
-                                    href="https://www.fox13news.com/news/teen-creates-app-to-protect-kids-from-social-media-says-total-ban-wont-work"
-                                    alt="FOX 13">
-                                <area shape="rect" coords="135,0,235,86"
-                                    href="https://www.globenewswire.com/news-release/2022/09/28/2524695/0/en/Safe-Kids-AI-Launches-New-Gmail-Extension-Aimed-At-Helping-Kids-Make-Better-Decisions-Online.html"
+
+        <!-- Session Content Home 1 -->
+        <section class="py-12">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+
+                    <div class="lg:w-7/12 col-span-7 hidden lg:block relative">
+
+                        <div
+                            class="float-box-outside absolute top-[-10%] left-[40%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-session1.png" class="mt-[-0.4rem] ml-[-5.5rem] absolute"
                                     alt="">
-                                <area shape="rect" coords="235,0,400,86"
-                                    href="https://www.aol.com/news/teen-creates-app-protect-kids-033535236.html" alt="">
-                                <area shape="rect" coords="400,0,900,86"
-                                    href="https://finance.yahoo.com/news/safe-kids-ai-launches-gmail-185100986.html"
-                                    alt="">
-                            </map>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 ">
-                    <img src="dist/images/img-banner-home.png" class="img-banner hidden md:block" alt="">
-                    <img src="dist/images/mobile/img-banner-home-mobile.png" class="img-banner md:hidden" alt="">
-                    <div class="text-center md:hidden mt-4 text-lg font-medium leading-6 tracking-[0.21em] uppercase ">
-                        Featured in<br>
-                        <img src="dist/images/featured-in-logos.png" class="img-logos" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Session Content Home 1 -->
-    <section id="session-content-home1 " class="container-custom mx-auto pb[3rem]">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 hidden lg:block">
-                <div
-                    class="float-box-outside-two absolute w-[345px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                    <div class="p-6 bg-white bg-opacity-90 rounded-lg border border-gray-300">
-                        <img src="dist/images/icon-session1.png" class="icon-floating-box absolute" alt="">
-                        <p class="font-semibold text-lg leading-7 px-0 py-0 pb-0 pl-12 m-0 p-float-box">
-                            <b>Is this really the best thing for you to be doing?</b>
-                        </p>
-                        <p class="p-float-box pt-2 pl-12 font-bold text-sm leading-5 text-red-600"><a href="#">Tell
-                                me
-                                more...</a></p>
-                    </div>
-                </div>
-
-                <div
-                    class="float-box-outside-three absolute w-[485px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                    <div class="p-6 bg-white bg-opacity-90 rounded-lg border border-gray-300">
-                        <img src="dist/images/icon-session2.png" class="icon-floating-box absolute" alt="">
-                        <p class="font-semibold text-lg leading-7 px-0 py-0 pb-0 pl-12 m-0 p-float-box">
-                            <b>It's normal to learn about grown up stuff. </b><br><br>
-                            Did you know that stuff like this is often made by hurting women and children?<br>
-                        </p>
-                        <p class="p-float-box pt-2 pl-12 font-bold text-sm leading-5 text-red-600"><a href="#">Tell me
-                                more...</a></p>
-                    </div>
-                </div>
-
-                <div
-                    class="float-box-outside-one absolute w-[305px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                    <div class="p-6 bg-white bg-opacity-90 rounded-lg border border-gray-300">
-                        <img src="dist/images/icon-session3.png" class="icon-floating-box absolute" alt="">
-                        <p class="font-semibold text-lg leading-7 px-0 py-0 pb-0 pl-12 m-0 p-float-box">
-                            <b>We all end up clicking on things we shouldn't.</b>
-                            <br><br>
-                            Did you know that spending less time in front of a screen may help you sleep
-                            better?<br>
-                        </p>
-                        <p class="p-float-box pt-2 pl-12 font-bold text-sm leading-5 text-red-600"><a href="#">Tell me
-                                more...</a></p>
-                    </div>
-                </div>
-
-                <img src="dist/images/img1.png" class="img-content img1 hidden lg:block" alt="">
-            </div>
-
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 box-session-content-home1 reveal fade-right">
-                <h2 class="session-content-home1 text-center lg:text-left">Safe
-                    Kids is
-                    the Internet on training
-                    wheels<span class="check-point"></span></h2>
-                <p
-                    class="session-content-home1 text-center lg:text-left text-lg p-[1rem] leading-[26px] lg:text-2xl lg:leading-9 lg:py-8 lg:pr-[14rem] lg:pl-0">
-                    Safe Kids artificial intelligence uses sophisticated models to intercept content other tools
-                    traditionally miss.
-                </p>
-                <img src="dist/images/img1.png" class="img-content img1 mobile" alt="">
-            </div>
-
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 mobile">
-
-                <div
-                    class="float-box-outside1 w-[90%] relative text-left left-[1.2rem] top-0 mb-[1rem] min-h-[min-h] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                    <div class="p-6 bg-white bg-opacity-90 rounded-lg border border-gray-300">
-                        <img src="dist/images/icon-session1.png" class="icon-floating-box" alt="">
-                        <p class="p-float-box font-semibold text-lg leading-7 px-0 py-0 pb-0 pl-12 m-0"><b>Is this
-                                really the best thing for you to be doing?</b></p>
-                        <p class="p-float-box btn-red pt-2 pl-12 font-bold text-sm leading-5 text-red-600"><a
-                                href="#">Tell me more...</a></p>
-                    </div>
-                </div>
-
-                <div
-                    class="float-box-outside2 w-[90%] relative text-left left-[1.2rem] top-0 mb-[1rem] min-h-[min-h] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                    <div class="p-6 bg-white bg-opacity-90 rounded-lg border border-gray-300">
-                        <img src="dist/images/icon-session2.png" class="icon-floating-box" alt="">
-                        <p class="p-float-box font-semibold text-lg leading-7 px-0 py-0 pb-0 pl-12 m-0">
-                            <b>It's normal to learn about grown up stuff. </b><br><br>
-                            Did you know that stuff like this is often made by hurting women and children?<br>
-                        </p>
-                        <p class="p-float-box btn-red pt-2 pl-12 font-bold text-sm leading-5 text-red-600"><a
-                                href="#">Tell me more...</a></p>
-                    </div>
-                </div>
-
-                <div
-                    class="float-box-outside3 w-[90%] relative text-left left-[1.2rem] top-0 mb-[1rem] min-h-[min-h] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                    <div class="p-6 bg-white bg-opacity-90 rounded-lg border border-gray-300">
-                        <img src="dist/images/icon-session3.png" class="icon-floating-box" alt="">
-                        <p class="p-float-box font-semibold text-lg leading-7 px-0 py-0 pb-0 pl-12 m-0">
-                            <b>We all end up clicking on things we shouldn't.</b>
-                            <br><br>
-                            Did you know that spending less time in front of a screen may help you sleep
-                            better?<br>
-                            <!--
-                             If you think we made a mistake by intercepting this site, <a href="#" class="btn-red">let us
-                             know</a>
-                -->
-                        </p>
-                        <p class="p-float-box btn-red pt-2 pl-12 font-bold text-sm leading-5 text-red-600"><a
-                                href="#">Tell me more...</a></p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="session-content-home2" class="lg:py-[5rem] py-[3rem]">
-        <div class="container-custom mx-auto py-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:gap-8">
-                <div class="md:col-span-3 col-span-1">
-                    <img class="logo mx-auto" src="dist/images/logo.svg" alt="">
-                    <h2
-                        class="text-[28px] leading-8 pb-[1rem] lg:leading-[52px] lg:text-5xl lg:font-extrabold lg:pt-0 lg:px-[15rem] lg:pb-[4rem] session-content-home2 text-center">
-                        AI
-                        smart scans
-                        websites, <span class="color2">not just keywords,
-                            to intercept accidental clicks and shocking searches.</span></h2>
-                </div>
-                <div class="col-span-3 md:col-span-1 text-center box-session-content-home2 reveal fade-left">
-                    <img src="dist/images/go.svg" class="img-content go-img mx-auto" alt="">
-                    <h4 class="session-content-home2 text-[#4dcc8f] font-bold text-[28px] leading-[36px]">
-                        Safe Kids
-                        approved</h4>
-                    <p class="session-content-home2 lg:absolute relative block pt-0 xl:pt-6 lg:pt-4 p-green">
-                        whitehouse.gov <span
-                            class="pt[0.3rem] pr-[0.8rem] pb-[0.3rem] pl-[0.8rem] bg-[#4DCC8F] rounded-[10px] inline-block text-white text-[20.4px]">is
-                            a
-                            government website</span>
-                    </p>
-                </div>
-
-                <div class="col-span-3 md:col-span-1 text-center">
-                    <img src="dist/images/img2.png" class="img-content img-session-content-home2 mx-auto" alt="">
-                </div>
-
-                <div class="col-span-3 md:col-span-1 text-center reveal fade-right">
-                    <img src="dist/images/stop.svg" class="img-content stop-img mx-auto" alt="">
-                    <h4 class="session-content-home2 text-[#ff2f4e] font-bold text-[28px] leading-[36px]">Safe Kids
-                        blocked</h4>
-                    <p class="session-content-home2 lg:absolute relative block pt-0 xl:pt-6 lg:pt-4 p-green">
-                        whitehouse.com <span
-                            class="pt[0.3rem] pr-[0.8rem] pb-[0.3rem] pl-[0.8rem] bg-[#ff2f4e] rounded-[10px] inline-block text-white text-[20.4px]">used
-                            to be an adult website</span>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="session-content-home3" class="bg-white lg:py-[4rem] py-[3rem]">
-        <div class="container-custom mx-auto">
-            <div class="flex flex-wrap">
-                <div class="lg:w-5/12 w-full box-session-content-home3 reveal fade-left active">
-                    <h2
-                        class="session-content-home3 text-[28px] leading-8 pb-[1rem] lg:text-left text-center lg:text-5xl lg:leading-[52px] lg:font-extrabold">
-                        Safe Kids AI smart scans
-                        desktop chat, <span class="color2">like Discord and in-game chats, to intercept bullying and
-                            grooming red
-                            flags.</span></h2>
-                </div>
-
-                <div class="lg:w-7/12 w-full lg:relative">
-
-                    <img src="dist/images/mobile/img3-1.png" class="img-content img1 img-session-content-home3 mobile"
-                        alt="" style="float: none;">
-                    <div
-                        class="float-box-outside4 relative lg:absolute w-[90%] lg:w-[345px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                        <div
-                            class="float-box py-[1.5rem] px-[1rem] bg-[#fffffff0] border border-[#eeeeee] rounded-[20px]">
-                            <img src="dist/images/icon-stop.svg" class="icon-floating-box" alt="">
-                            <p class="p-float-box  text-left text-2xl font-semibold not-italic leading-7 m-0 ">
-                                Someone tells your
-                                child they are worthless and should be dead.</p>
-                        </div>
-                    </div>
-
-                    <img src="dist/images/mobile/img3-2.png" class="img-content img1 img-session-content-home3 mobile"
-                        alt="" style="float: none;">
-                    <div
-                        class="float-box-outside5 relative lg:absolute w-[90%] lg:w-[295px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                        <div
-                            class="float-box py-[1.5rem] px-[1rem] bg-[#fffffff0] border border-[#eeeeee] rounded-[20px]">
-                            <img src="dist/images/icon-check.svg" class="icon-floating-box " alt="">
-                            <p class="p-float-box text-2xl font-semibold not-italic leading-7 m-0 text-left">Child jokes
-                                with
-                                friends about laughing to death.</p>
-                        </div>
-                    </div>
-
-                    <img src="dist/images/img3.png" class="img-content img1 hidden lg:block" alt="">
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="session-content-home4" class="bg-white pt-[4rem] pb-[1rem]">
-        <div class="container-custom mx-auto">
-            <div class="flex flex-wrap">
-                <div class="lg:w-6/12 sm:w-full box-session-content-home4 hidden lg:block relative">
-                    <div
-                        class="float-box-outside6 absolute w-[295px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                        <div
-                            class="float-box py-[1.5rem] px-[1rem] bg-[#fffffff0] border border-[#eeeeee] rounded-[20px]">
-                            <img src="dist/images/icon-check.svg" class="icon-floating-box " alt="">
-                            <p class="p-float-box text-2xl font-semibold not-italic leading-7 m-0">Child searches for
-                                civil war guns for school project.</p>
-                        </div>
-                    </div>
-
-                    <div
-                        class="float-box-outside7 absolute w-[255px] bg-transparent shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
-                        <div
-                            class="float-box py-[1.5rem] px-[1rem] bg-[#fffffff0] border border-[#eeeeee] rounded-[20px]">
-                            <img src="dist/images/icon-stop.svg" class="icon-floating-box" alt="">
-                            <p class="p-float-box text-2xl font-semibold not-italic leading-7 m-0">Child searches for
-                                automatic rifles.</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap">
-                        <div class="lg:w-6/12 sm:w-full">
-                            <div class="scan-wrapper relative inline-block">
-                                <img src="dist/images/img4-1-no-scan.png"
-                                    class="img-content img1 img-session-content-home4 scan-image" alt="">
-                                <div class="scan-overlay absolute top-0 left-0 w-full h-full"></div>
+                                <p class="pl-[3rem] non-italic font-semibold text-lg leading-7 m-0">
+                                    <b>Is this really the best thing for you to be doing?</b>
+                                </p>
+                                <p class="pt-[0.5rem] pl-[3rem] font-bold text-sm leading-[19px]"><a href="#"
+                                        class="text-[red]">Tell
+                                        me
+                                        more...</a></p>
                             </div>
                         </div>
-                        <div class="lg:w-6/12 sm:w-full">
-                            <div class="blocked-image-wrapper " id="blocked-image"></div>
+
+                        <div
+                            class="float-box-outside absolute top-[20%] left-[5%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-session2.png" class="mt-[-0.4rem] ml-[-5.5rem] absolute"
+                                    alt="">
+                                <p class="pl-[3rem] non-italic font-semibold text-lg leading-7 m-0">
+                                    <b>It's normal to learn about grown up stuff. </b><br><br>
+                                    Did you know that stuff like this is often made by hurting women and children?<br>
+                                </p>
+                                <p class="pt-[0.5rem] pl-[3rem] font-bold text-sm leading-[19px]"><a href="#"
+                                        class="text-[red]">Tell me more...</a></p>
+                            </div>
                         </div>
 
+                        <div
+                            class="float-box-outside absolute top-[70%] left-[5%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-session3.png" class="mt-[-0.4rem] ml-[-5.5rem] absolute"
+                                    alt="">
+                                <p class="pl-[3rem] non-italic font-semibold text-lg leading-7 m-0">
+                                    <b>We all end up clicking on things we shouldn't.</b>
+                                    <br><br>
+                                    Did you know that spending less time in front of a screen may help you sleep
+                                    better?<br>
+                                </p>
+                                <p class="pt-[0.5rem] pl-[3rem] font-bold text-sm leading-[19px]"><a href="#"
+                                        class="text-[red]">Tell me more...</a></p>
+                            </div>
+                        </div>
+
+                        <img src="dist/images/img1.png" class="" alt="">
+                    </div>
+
+                    <div class="lg:w-5/12 col-span-5">
+
+                        <div class="reveal text-center lg:text-left fade-right">
+                            <h2
+                                class="font-gallix-extrabold xl:pt-[0] xl:pb-[0] xl:pr-[6rem] xl:pl-[0] pt-[1rem] pb-[1rem] pr-[1.5rem] pl-[1.5rem] min-[1920px]:text-[100px] min-[1920px]:leading-[78px] xl:text-[90px] xl:leading-[68px] sm:text-[60px] sm:leading-[50px] text-[50px] leading-[40px] font-extrabold">
+                                Safe Kids is the Internet on
+                                training wheels<span class="check-point"></span></h2>
+                            <p
+                                class="py-[1rem] px-[1rem] text-lg leading-[26px] mb-[0.5rem] xl:text-2xl xl:leading-9 xl:py-[2rem] xl:pr-[14rem] xl:pl-[0]">
+                                Safe Kids artificial intelligence uses sophisticated models to intercept content other
+                                tools
+                                traditionally miss.
+                            </p>
+                            <img src="dist/images/img1.png" class="block lg:hidden" alt="">
+                        </div>
+                    </div>
+
+                    <div class="lg:hidden w-full px-3">
+
+                        <div class="float-box-outside w-[100%] text-left mb-[1rem] min-h-[130px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-session1.png" class="mt-[-0.4rem] ml-[-3.5rem] absolute"
+                                    alt="">
+                                <p
+                                    class="pl-[5rem] sm:pl-[4.5rem] xl:pl-[3rem] non-italic font-semibold text-lg leading-7 m-0">
+                                    <b>Is this really the best thing for you to be doing?</b>
+                                </p>
+                                <p class="pl-[5rem] sm:pl-[4.5rem] xl:pl-[3rem] pt-[1rem] xl:pt-[0.5rem]"><a href="#"
+                                        class="text-[red]">Tell me more...</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="float-box-outside w-[100%] text-left mb-[1rem] min-h-[130px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-session2.png" class="mt-[-0.4rem] ml-[-3.5rem] absolute"
+                                    alt="">
+                                <p
+                                    class="pl-[5rem] sm:pl-[4.5rem] xl:pl-[3rem] non-italic font-semibold text-lg leading-7 m-0">
+                                    <b>It's normal to learn about grown up stuff. </b><br><br>
+                                    Did you know that stuff like this is often made by hurting women and children?<br>
+                                </p>
+                                <p class="pl-[5rem] sm:pl-[4.5rem] xl:pl-[3rem] pt-[1rem] xl:pt-[0.5rem]"><a href="#"
+                                        class="text-[red]">Tell me more...</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="float-box-outside w-[100%] text-left mb-[1rem] min-h-[130px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-session3.png" class="mt-[-0.4rem] ml-[-3.5rem] absolute"
+                                    alt="">
+                                <p
+                                    class="pl-[5rem] sm:pl-[4.5rem] xl:pl-[3rem] non-italic font-semibold text-lg leading-7 m-0">
+                                    <b>We all end up clicking on things we shouldn't.</b>
+                                    <br><br>
+                                    Did you know that spending less time in front of a screen may help you sleep
+                                    better?<br>
+                                </p>
+                                <p class="pl-[5rem] sm:pl-[4.5rem] xl:pl-[3rem] pt-[1rem] xl:pt-[0.5rem]"><a href="#"
+                                        class="text-[red]">Tell me more...</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="lg:w-6/12 sm:w-full box-session-content-home4 reveal fade-right active">
-                    <h2
-                        class="session-content-home4 text-[28px] leading-[32px] text-center lg:text-left lg:text-5xl lg:leading-[52px] font-extrabold">
-                        Safe Kids AI
-                        smart scans
-                        URLS and website
-                        content, <span class="color2">not just keywords, to intercept inappropriate content
-                            before it’s seen.</span>
-                    </h2>
+        <!-- Session Content Home 2 -->
+        <section class="py-[3rem] text-center">
+            <div class="container mx-auto ">
+                <div class="flex flex-wrap justify-center items-center">
+
+                    <div class="w-full lg:w-12/12">
+                        <img class="logo mx-auto mb-4" src="dist/images/logo.svg" alt="">
+                        <h2
+                            class="font-gallix-extrabold text-[28px] sm:text-4xl sm:leading-10 xl:text-5xl xl:leading-[52px] xl:pr-[15rem] xl:pb-[4rem] xl:pl-[15rem] leading-8 font-extrabold pb-[1rem]">
+                            AI
+                            smart scans websites,
+                            <span class="color2">not just keywords,
+                                to intercept accidental clicks and shocking searches.</span>
+                        </h2>
+                    </div>
+
+                    <div class="w-full lg:w-4/12 reveal fade-left">
+                        <img src="dist/images/go.svg"
+                            class="w-[70%] sm:w-[50%] md:w-[35%] lg:[w-45%] xl:w-[50%] xl:pt-[4rem] min-[1920px]:w-[100%] mx-auto"
+                            alt="">
+                        <h4 class="font-bold text-[28px] leading-[38px] text-[#4dcc8f]">Safe Kids approved</h4>
+                        <p class="relative xl:pt-[1rem] min-[1920]:pt-[3rem]">
+                            whitehouse.gov <br>
+                            <span
+                                class="py-[0.3rem] px-[0.8rem] inline-block text-[85%] text-white rounded-md bg-[#4DCC8F]">is
+                                a government
+                                website</span>
+                        </p>
+                    </div>
+
+                    <div class="w-full lg:w-4/12">
+                        <img src="dist/images/img2.png" class="sm:w-[70%] md:w-[100%] mx-auto" alt="">
+                    </div>
+
+                    <div class="w-full lg:w-4/12 reveal fade-right">
+                        <img src="dist/images/stop.svg"
+                            class="w-[70%] sm:w-[50%] md:w-[35%] lg:[w-45%] xl:w-[50%] xl:pt-[4rem] min-[1920px]:w-[100%] mx-auto"
+                            alt="">
+                        <h4 class="font-bold text-[28px] leading-[38px] text-[#ff2f4e]">Safe Kids blocked</h4>
+                        <p class="relative xl:pt-[1rem] min-[1920]:pt-[3rem]">
+                            whitehouse.com <br> <span
+                                class="py-[0.3rem] px-[0.8rem] inline-block text-[85%] text-white rounded-md bg-[#ff2f4e]">used
+                                to be an adult website</span>
+                        </p>
+                    </div>
+
                 </div>
+            </div>
+        </section>
 
-                <!-- SLIDER -->
-                <div class="mobile w-full">
+        <!-- Session Content Home 3 -->
+        <section class="py-[3rem] lg:py-[5rem] xl:py-[4rem] ">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap justify-center items-center">
+                    <div class="w-full lg:w-5/12 reveal fade-left">
+                        <h2
+                            class="font-gallix-extrabold text-[28px] sm:text-4xl sm:leading-10 xl:text-5xl xl:leading-[52px] leading-8 font-extrabold">
+                            Safe Kids AI smart
+                            scans desktop chat,
+                            <span class="color2">like Discord and in-game chats,to intercept bullying and grooming
+                                red flags.</span>
+                        </h2>
+                    </div>
 
-                    <div class="slider-session-content-home4">
+                    <div class="w-full lg:w-7/12 relative">
 
-                        <div class="w-full">
-                            <div class="scan-wrapper relative">
-                                <img src="https://www.safekids.ai/wp-content/themes/safekids/dist/images/img4-1-no-scan.png"
-                                    class="img-content img1 img-session-content-home4 scan-image" alt=""
-                                    style="float: none;">
-                                <div class="scan-overlay absolute top-0 left-0 w-full h-full"></div>
+                        <img src="dist/images/mobile/img3-1.png" class="lg:hidden" alt="">
+                        <div
+                            class="float-box-outside bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] bg-[#fffffff0] rounded-[20px] z-[9] w-[90%] text-left mb-[1rem] min-h-[130px] lg:min-h-[0] relative lg:absolute lg:top-[0] lg:left-[0] lg:w-[350px] lg:mb-[0] xl:w-[345px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-stop.svg" class="mt-[-0.4rem] ml-[-3.5rem] absolute" alt="">
+                                <p
+                                    class="text-lg sm:text-[22px] sm:pl-[4.5rem] xl:text-[24px]  pl-[5rem] non-italic font-semibold leading-7">
+                                    Someone tells your child they are worthless and should be dead.</p>
                             </div>
-                            <div
-                                class="float-box-outside6 relative w-[90%] text-left left-[1.2rem] top-[-3rem] mb-[1rem] shadow-[none] min-h-[130px]">
-                                <div
-                                    class="float-box py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
-                                    <img src="https://www.safekids.ai/wp-content/themes/safekids/dist/images/icon-check.svg"
-                                        class="icon-floating-box" alt="">
-                                    <p class="p-float-box text-[16px]">Child searches for civil war guns for school
-                                        project.</p>
+                        </div>
+
+                        <img src="dist/images/mobile/img3-2.png" class="lg:hidden" alt="">
+                        <div
+                            class="float-box-outside bg-transparent shadow-lg bg-[#fffffff0] shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9] w-[90%] text-left mb-[1rem] min-h-[130px] lg:min-h-[0] relative lg:absolute lg:bottom-[0] lg:left-[150px] lg:w-[350px] lg:mb-[0] xl:w-[345px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-check.svg" class="mt-[-0.4rem] ml-[-3.5rem] absolute" alt="">
+                                <p
+                                    class="text-lg sm:text-[22px] sm:pl-[4.5rem] xl:text-[24px]  pl-[5rem] non-italic font-semibold leading-7">
+                                    Child jokes with friends about laughing to death.</p>
+                            </div>
+                        </div>
+
+                        <img src="dist/images/img3.png" class="hidden lg:block" alt="">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Session Content Home 4 -->
+        <section class="py-[3rem] lg:pt-[5rem] lg:pb-0 xl:pt-[4rem] xl:pb-[1rem]">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0 hidden lg:block relative">
+                        <div
+                            class="float-box-outside absolute top-[-100px] left-[0] w-[295px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-check.svg" class="mt-[-0.4rem] ml-[-5.5rem] absolute" alt="">
+                                <p class="pl-[3rem] non-italic font-semibold text-[24px] leading-[28px] m-0">Child
+                                    searches
+                                    for
+                                    civil
+                                    war guns for school project.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="float-box-outside absolute bottom-[0] left-[45%] w-[255px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                                <img src="dist/images/icon-stop.svg" class="mt-[-0.4rem] ml-[-5.5rem] absolute" alt="">
+                                <p class="pl-[3rem] non-italic font-semibold text-[24px] leading-[28px] m-0">Child
+                                    searches
+                                    for
+                                    automatic rifles.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap">
+
+                            <div class="w-full lg:w-6/12">
+                                <div class="scan-wrapper relative inline-block">
+                                    <img src="dist/images/img4-1-no-scan.png" class="" alt="">
+                                    <div class="scan-overlay"></div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="w-full">
-                            <div class="blocked-image-wrapper" id="blocked-image"
-                                style="background-image: url(&quot;https://www.safekids.ai/wp-content/themes/safekids/dist/images/img4-gun-search.png&quot;);">
+                            <div class="w-full lg:w-6/12">
+                                <div class="blocked-image-wrapper" id="blocked-image"></div>
                             </div>
-                            <div
-                                class="float-box-outside7 relative w-[90%] text-left left-[1.2rem] top-[-3rem] mb-[1rem] shadow-[none] min-h-[130px]">
+
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0 box-session-content-home4 reveal fade-right">
+                        <h2
+                            class="font-gallix-extrabold text-[28px] leading-[32px] sm:text-[38px] xl:text-[48px] xl:leading-[52px] sm:leading-[42px] md:pt-[6rem] md:pb-[2rem] md:pl-[7rem] xl:pt-[11rem] xl:pr-[5rem] xl:pb-[0] xl:pl-[3rem] 2xl:pt-[12rem] 2xl:pr-[2rem] 2xl:pb-[0] 2xl:pl-[3rem] min-[1920px]:pt-[9rem] min-[1920px]:pr-[5rem] min-[1920px]:pl-[5rem]  pb-[2rem] font-extrabold">
+                            Safe
+                            Kids AI smart
+                            scans URLS and website content,
+                            <span class="color2">not just keywords, to intercept inappropriate content before it’s
+                                seen.</span>
+                        </h2>
+                    </div>
+
+
+                    <!-- SLIDER -->
+                    <div class="lg:hidden">
+
+                        <div class="slider-session-content-home4">
+
+                            <div class="w-full">
+                                <div class="inline-block relative">
+                                    <img src="dist/images/img4-1-no-scan.png" class="" alt="">
+                                    <div class="scan-overlay"></div>
+                                </div>
                                 <div
-                                    class="float-box py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
-                                    <img src="https://www.safekids.ai/wp-content/themes/safekids/dist/images/icon-stop.svg"
-                                        class="icon-floating-box" alt="">
-                                    <p class="p-float-box text-[20px]">Child searches for automatic rifles.</p>
+                                    class="float-box-outside w-[90%] relative text-left top-[-1rem] mb-[1rem] shadow-[none] min-h-[130px] bg-transparent rounded-[20px] z-[9] md:top-[-6rem] md:max-w-[350px] mx-auto">
+                                    <div
+                                        class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE] min-h-[130px]">
+                                        <img src="dist/images/icon-check.svg" class="absolute mt-[-0.4rem] ml-[-3.5rem]"
+                                            alt="">
+                                        <p
+                                            class="text-base pl-[5rem] sm:text-lg sm:pl-[4.5rem] no-italic font-semibold leading-[28px]">
+                                            Child searches
+                                            for civil war guns
+                                            for school project.</p>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="w-full">
+                                <div class="blocked-image-wrapper" id="blocked-image"></div>
+                                <div
+                                    class="float-box-outside w-[90%] relative text-left top-[-1rem] mb-[1rem] shadow-[none] min-h-[130px] bg-transparent rounded-[20px] z-[9] md:top-[-6rem] md:max-w-[350px] mx-auto">
+                                    <div
+                                        class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE] min-h-[130px]">
+                                        <img src="dist/images/icon-stop.svg" class="absolute mt-[-0.4rem] ml-[-3.5rem]"
+                                            alt="">
+                                        <p
+                                            class="text-base pl-[5rem] sm:text-lg sm:pl-[4.5rem] no-italic font-semibold leading-[28px]">
+                                            Child searches for automatic rifles.</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- SLIDER -->
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Session Content Home 5 -->
+        <section id="session-content-home5"
+            class="pt-[8rem] sm:pt-[12rem] md:pt-[20rem] xl:pt-[17rem] 2xl:pt-[21rem] min-[1920px]:pt-[25rem] md:pb[10rem] lg:pb-[6rem] xl:pb-0 2xl:pb-[2rem] min-[1920px]:pb-0 pb-[20rem] bg-no-repeat">
+            <div class="container mx-auto py-8">
+                <div class="flex flex-wrap">
+
+                    <div class="w-full">
+                        <h2
+                            class="font-gallix-extrabold text-[28px] leading-[32px] pb-[2rem] sm:text-[38px] sm:leading-[42px] xl:text-[48px] xl:leading-[52px] xl:pt-0 xl:pr-[10rem] xl:pb-[4rem] xl:pl-[10rem] min-[1920px]:pr-[15rem] min-[1920px]:pl-[15rem] text-center text-white font-extrabold">
+                            Safe Kids is
+                            password-protected
+                            so even the most tech-savvy kids
+                            can’t remove it.</h2>
+                    </div>
+
+                    <div class="w-full lg:w-4/12 px-4 mb-8 md:mb-0 column-tab-left reveal fade-left">
+
+                        <div class="flex py-[1rem] px-[1rem] text-left bg-white shadow-lg rounded-[20px] lg:w-[140%]">
+                            <div class="mr-4">
+                                <img src="dist/images/icon1.svg" class="" alt="">
+                            </div>
+                            <div>
+                                <p class="">
+                                    <b>Chrome Extension</b>
+                                </p>
+                                <p class="">
+                                    Kids can’t remove it.<br>Parents can toggle it off.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space h-8"></div>
+
+                        <div class="flex py-[1rem] px-[1rem] text-left bg-white shadow-lg rounded-[20px] lg:w-[140%]">
+                            <div class="mr-4">
+                                <img src="dist/images/icon2.svg" class="" alt="">
+                            </div>
+                            <div>
+                                <p class="">
+                                    <b>Outline custom limits so Safe Kids</b>
+                                </p>
+                                <p class="">
+                                    blocks what you’d like
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space h-8"></div>
+
+                        <div class="flex py-[1rem] px-[1rem] text-left bg-white shadow-lg rounded-[20px] lg:w-[140%]">
+                            <div class="mr-4">
+                                <img src="dist/images/icon3.svg" class="" alt="">
+                            </div>
+                            <div>
+                                <p class="">
+                                    <b>Get notifications of blocks</b>
+                                </p>
+                                <p class="">
+                                    Select how often you’re notified
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space h-8"></div>
+
+                        <div class="flex py-[1rem] px-[1rem] text-left bg-white shadow-lg rounded-[20px] lg:w-[140%]">
+                            <div class="mr-4">
+                                <img src="dist/images/icon4.svg" class="" alt="">
+                            </div>
+                            <div>
+                                <p class="">
+                                    <b>Patented approach to behavior change</b>
+                                </p>
+                                <p class="">
+                                    teaches kids to make better choices.
+                                </p>
+                            </div>
                         </div>
 
                     </div>
 
-                </div>
-                <!-- SLIDER -->
+                    <div class="w-full lg:w-8/12 px-4 mb-8 md:mb-0">
+                        <img src="dist/images/img5.png"
+                            class="lg:w-[110%] xl:w-[100%] xl:relative xl:right-[-5rem] z-[0] 2xl:right-[-20rem] 2xl:pt-[2rem]"
+                            alt="">
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </section>
 
+            <div id="session-content-home6" class="container mx-auto py-8">
+                <div class="flex flex-wrap">
 
-    <section id="session-content-home5" class="bg-white">
-        <div class="container-custom mx-auto">
-            <div class="flex flex-wrap">
-
-                <div class="">
-                    <h2
-                        class="session-content-home5 text-[28px] leading-[32px] lg:text-5xl lg:leading-[52px] font-extrabold text-center text-white">
-                        Safe
-                        Kids is password-protected so even the
-                        most tech-savvy kids can’t remove it.</h2>
-                </div>
-
-                <div class="lg:w-4/12 sm:w-full column-tab-left pt-1rem reveal fade-left">
-
-                    <div
-                        class="box-session-content-home5 text-left bg-white shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] px-[1.5rem] py-[1.5rem]">
-                        <img src="dist/images/icon1.svg" class="icon-small absolute" alt="">
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            <b>Chrome Extension</b>
-                        </p>
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            Kids can’t remove it.<br>Parents can toggle it off.
+                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0 column-session-content-home6">
+                        <h2
+                            class="font-gallix-extrabold text-[50px] leading-[40px] md:text-[80px] md:leading-[70px] md:mt-[7rem] lg:text-[70px] lg:leading-[60px] lg:mt-[11rem] xl:text-[106px] xl:leading-[100px] xl:mt-[0] min-[1920px]:text-[120px] min-[1920px]:leading-[120px] font-extrabold">
+                            Safe Kids AI
+                            identifies</h2>
+                        <p
+                            class="text-[28px] leading-[32px] py-[1rem] px-[1.5rem] font-extrabold md:text-[38px] md:leading-[42px] md:px-0 md:py-0 xl:text-[48px] xl:leading-[52px]">
+                            intent-based behavior to catch red flag searches before other platforms might.
                         </p>
                     </div>
 
-                    <div class="space"></div>
-
-                    <div
-                        class="box-session-content-home5 text-left bg-white shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] px-[1.5rem] py-[1.5rem]">
-                        <img src="dist/images/icon2.svg" class="icon-small absolute" alt="">
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            <b>Outline custom limits so Safe Kids</b>
-                        </p>
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            blocks what you’d like
-                        </p>
-                    </div>
-
-                    <div class="space"></div>
-
-                    <div
-                        class="box-session-content-home5 text-left bg-white shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] px-[1.5rem] py-[1.5rem]">
-                        <img src="dist/images/icon3.svg" class="icon-small absolute" alt="">
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            <b>Get notifications of blocks</b>
-                        </p>
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            Select how often you’re notified
-                        </p>
-                    </div>
-
-                    <div class="space"></div>
-
-                    <div
-                        class="box-session-content-home5 text-left bg-white shadow-[0px 24px 27px rgba(0, 0, 0, 0.07)] rounded-[20px] px-[1.5rem] py-[1.5rem]">
-                        <img src="dist/images/icon4.svg" class="icon-small absolute" alt="">
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            <b>Patented approach to <br>behavior change</b>
-                        </p>
-                        <p class="session-content-home5 ml-[3.5rem] mb-0">
-                            teaches kids to make better choices.
-                        </p>
+                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0">
+                        <img src="dist/images/img6.png"
+                            class="sm:right-[-7rem] md:right-[-2rem] lg:right-[-9rem] lg:w-[110%] lg:pt-[3rem] xl:right-[-5rem] xl:w-[100%] 2xl:right-[-20rem] min-[1920px]:right-[5rem] min-[1920px]:pt-[0] right-[-20px]  reveal fade-right"
+                            alt="">
                     </div>
 
                 </div>
-
-
-                <div class="lg:w-8/12 sm:w-full">
-                    <img src="dist/images/img5.png" class="img-content img-session-content-home5" alt="">
-                </div>
-
             </div>
-        </div>
+        </section>
 
-        <div id="session-content-home6" class="container-custom mx-auto">
-            <div class="flex flex-wrap">
+        <!-- Footer -->
+        <div id="footer"
+            class="px-[1rem] absolute bottom-[1.5rem] mx-auto w-[100%] text-center lg:px-[5%] xl:px-[7%] min-[1920px]:px-[14%]">
 
-                <div class="lg:w-6/12 sm:w-full column-session-content-home6">
-                    <h2 class="session-content-home6 font-extrabold lg:pb-[1rem]">Safe Kids<br>AI identifies</h2>
-                    <p
-                        class="session-content-home6 py-[1rem] px-[1rem] font-extrabold text-[28px] leading-[32px] m-0 lg:text-5xl lg:leading-[52px]">
-                        intent-based behavior to catch red flag searches before other platforms might.
-                    </p>
-                </div>
+            <div class="flex flex-wrap text-[#ffffff80] text-sm ">
 
-                <div class="lg:w-6/12 sm:w-full">
-                    <img src="dist/images/img6.png" class="img-content img-session-content-home5 reveal fade-right"
-                        alt="">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <div id="footer" class="font-sm text-[#ffffff80]">
-        <div class="container mx-auto">
-            <div class="flex flex-wrap justify-between py-8">
-
-                <div class="md:w-5/12 w-full md:pr-8 lg:text-left footer">
+                <div class="w-full md:w-5/12 md:text-left text-center">
                     <a href="https://www.safekids.ai/">
-                        <img src="dist/images/logo-footer.svg" class="logo-footer mx-auto lg:mx-0" alt="">
+                        <img src="dist/images/logo-footer.svg" class="mx-auto md:mx-0" alt="">
                     </a>
-                    <p class="text-sm leading-6 py-[1rem] font-normal mb-[1.5rem]">Our
-                        mission is to keep
-                        kids safe
-                        online. Safe
+                    <p class="text-lg leading-[22px] py-[1rem] font-normal">Our mission is to keep kids safe online.
+                        Safe
                         Kids is
-                        developed by
-                        kids,
-                        mental health experts and supported by a world-class advisory team.</p>
+                        developed by kids, mental health experts and supported by a world-class advisory team.</p>
                     <div class="ml-[-0.7rem]">
                         <a href="mailto:support@safekids.ai"
-                            class="font-medium text-sm leading-[19px] text-white no-underline px-[0.8rem]">Contact
+                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Contact
                             us</a>
-                        |
+                        <span>|</span>
                         <a href="privacy-policy"
-                            class="font-medium text-sm leading-[19px] text-white no-underline px-[0.8rem]">Privacy</a>
-                        |
+                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Privacy</a>
+                        <span>|</span>
                         <a href="terms-and-conditions"
-                            class="font-medium text-sm leading-[19px] text-white no-underline px-[0.8rem]">Terms &amp;
+                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Terms &
                             Conditions</a>
                     </div>
                 </div>
 
-                <div class="md:w-2/12"></div>
+                <div class="md:w-2/12 w-full"></div>
 
-                <div class="md:w-5/12 w-full flex flex-col justify-between lg:text-right">
-                    <div class="menu-footer">
-                        <a href="products">Products</a>
-                        <a href="how-it-works-privacy">How it works</a>
-                        <a href="patents">Patents</a>
-                        <a href="opensource">Opensource</a>
-                        <a href="about-us">About</a>
+                <div class="md:w-5/12 w-full flex flex-col justify-between md:text-right text-center">
+                    <div class="">
+                        <a href="products"
+                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Products</a>
+                        <a href="how-it-works-privacy"
+                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">How it
+                            works</a>
+                        <a href="patents"
+                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Patents</a>
+                        <a href="opensource"
+                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Opensource</a>
+                        <a href="about-us"
+                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">About</a>
+                        <!--<a href="https://app.safekids.ai/signin" target="_blank" class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Login</a>-->
                     </div>
-                    <div class="text-sm text-[rgba(255, 255, 255, 0.5)] leading-6 py-[1rem] font-normal mb-[1.5rem]">
-                        © 2023 Safe Kids LLC. All Rights Reserved.
-                    </div>
+                    <div class="pt-[2rem] xl:pt-0">© 2023 Safe Kids LLC. All Rights
+                        Reserved.</div>
                 </div>
 
             </div>
@@ -638,57 +670,22 @@
     </div>
 
 
-
-
-    <!-- MODAL VIDEO - ABOUT US / HOW IT WORKS PRIVACY-->
-    <!-- <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modal-label"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <iframe id="video" width="100%" height="431" src="https://www.youtube.com/embed/1KCg9eU9e68"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- MODAL VIDEO -->
-    <!-- <script>
-        $('#play-video').click(function () {
-            $('#video-modal').modal('show');
-            $('section.navigation').hide();
-        });
-
+    <script>
         $(document).ready(function () {
-            // Variável para guardar o src do vídeo
-            var videoSrc = $('#video')[0].src;
-
-            // Ao fechar o modal, parar o vídeo
-            $('#video-modal').on('hidden.bs.modal', function () {
-                $('#video')[0].src = "";
-                $('section.navigation').show();
+            // Button click event handler
+            $("#haeder-menu-button").click(function (event) {
+                event.stopPropagation(); // Prevent click event from bubbling up to the document
+                $("#mobile-navigation").toggleClass("hidden"); // Toggle 'highlight' class on the div
             });
 
-            // Ao abrir o modal, reiniciar o vídeo
-            $('#video-modal').on('shown.bs.modal', function () {
-                $('#video')[0].src = videoSrc + "?autoplay=1";
-            });
-
-            // Ao abrir o modal, adicionar a classe "no-scroll" no body para desabilitar o scroll
-            $('#video-modal').on('show.bs.modal', function () {
-                $('html, body').addClass('no-scroll');
-            });
-
-            // Ao fechar o modal, remover a classe "no-scroll" do body para habilitar o scroll
-            $('#video-modal').on('hidden.bs.modal', function () {
-                $('html, body').removeClass('no-scroll');
+            // Document click event handler to remove class if clicked outside the div
+            $(document).click(function (event) {
+                if (!$(event.target).closest('#myDiv').length) { // Check if clicked outside the div
+                    $("#mobile-navigation").removeClass("hidden"); // Remove 'highlight' class from the div
+                }
             });
         });
-    </script> -->
-    <!-- PLAY VIDEO MODAL -->
-
+    </script>
 
     <script>
         const blockedImage = document.getElementsByClassName('blocked-image-wrapper');
@@ -706,8 +703,6 @@
             blockedImage[1].style.backgroundImage = `url(${images[index]})`;
         }, 4500);
     </script>
-
-
     <!-- ANIMATION INTRO -->
     <script>
         function load() {
@@ -749,8 +744,6 @@
         window.addEventListener("scroll", reveal);
     </script>
     <!-- ANIMATION INTRO -->
-
-    <!-- HEADER FIXED -->
     <script>
         $(window).scroll(function () {
             if ($(window).scrollTop() > 1) {
@@ -760,34 +753,10 @@
             }
         });
     </script>
-
     <script>
         $(".nav-link").click(function () {
             $("#navbarScroll").removeClass("show");
         });
-    </script>
-    <!-- HEADER FIXED -->
-
-    <!-- MODAL -->
-    <!-- <script>
-        var myModal = document.getElementById('video-modal')
-        var myInput = document.getElementById('myInput')
-
-        myModal.addEventListener('shown.bs.modal', function () {
-            myInput.focus()
-        })
-    </script> -->
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <script>
-        document.addEventListener('wpcf7mailsent', function (event) {
-            Swal.fire({
-                title: 'Sent with success!',
-                icon: 'success'
-            })
-            ga('gtm2.send', 'event', 'Formulário', 'Envio', 'Formulário');
-        }, false);
     </script>
 
 </body>
