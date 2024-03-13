@@ -882,6 +882,63 @@ p.session-content-home6 {
   margin-left: 0.3rem;
 }
 
+.slider-session-content-products2-nav-item.slick-slide.slick-current.slick-active
+  img {
+  border: #ff2f4e 5px solid;
+  border-radius: 500px;
+}
+
+.font-gellix {
+  font-family: "Gellix";
+}
+
+button.btn.small3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+  margin: 0;
+  background: linear-gradient(84.93deg, #4bc58a 13.42%, #69d39f 144.26%);
+  box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  transition: 0.5s;
+  width: auto;
+}
+
+button.btn.small4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 0rem 0.5rem 1.5rem;
+  margin: 0;
+  background: linear-gradient(84.93deg, #765fef 13.42%, #9d8bf3 144.26%);
+  box-shadow: 0px 1px 36px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  transition: 0.5s;
+  width: auto;
+}
+
+img.bg-icon-btn {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+
+.check-point2 {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-image: url(dist/images/how-it-works-privacy/check-point2.svg);
+  background-size: cover;
+  mask-image: url(dist/images/how-it-works-privacy/check-point2.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  margin-left: 0.3rem;
+}
+
 @keyframes dot-animation {
   0% {
     transform: translateX(0);
