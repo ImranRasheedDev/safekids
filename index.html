@@ -27,19 +27,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                setTimeout(function () {
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
 
-                    // Fade in duration: 1 second 
-                    $("#contentWrapper").fadeIn(1000);
-                    $(".loading-overlay").fadeOut(1000);
+                // Fade in duration: 1 second 
+                $("#contentWrapper").fadeIn(1000);
+                $(".loading-overlay").fadeOut(1000);
 
-                    // Fade out duration: 1 second 
-                    // Display loading overlay for 1 second 
-                }, 1000);
-            }); 
-        </script>
+                // Fade out duration: 1 second 
+                // Display loading overlay for 1 second 
+            }, 1000);
+        }); 
+    </script>
 
 </head>
 
@@ -83,7 +83,7 @@
                         </div>
 
                         <div id="mobile-navigation"
-                            class="md:hidden text-left pb-8 overflow-y-auto  top-full left-0 w-full">
+                            class="md:hidden hidden text-left pb-8 overflow-y-auto  top-full left-0 w-full">
                             <ul class="space-y-1 px-4 py-2">
                                 <li>
                                     <a href="how-it-works-privacy.html"
@@ -116,12 +116,12 @@
 
         <!-- Banner -->
 
-        <section class="pb-[3rem] lg:pb-[5rem]">
+        <section class="pb-[3rem] lg:pb-[5rem] pt-[6rem] lg:pt-[9rem]">
             <div class="container mx-auto">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2">
                         <div
-                            class="pt-[5rem] lg:pt-[7rem] xl:pt-[8rem] xl:pr-[7rem] xl:pb-[5rem] 2xl:pt-[9rem] 2xl:pr-[5rem] 2xl:pb-[5rem] min-[1920px]:pt-[12rem] min-[1920px]:pr-[7rem] min-[1920px]:pb-[5rem] text-center md:text-left">
+                            class="xl:pb-[5rem] 2xl:pr-[5rem] 2xl:pb-[5rem] min-[1920px]:pr-[7rem] min-[1920px]:pb-[5rem] text-center md:text-left">
                             <h1
                                 class="text-[65px] leading-[55px] sm:text-[85px] sm:leading-[80px] xl:text-[120px] xl:leading-[106px] 2xl:text-[130px] 2xl:leading-[126px]">
                                 Bey<span class="beyond-icon"></span>nd<br><span class="color2">blocking.</span></h1>
@@ -162,7 +162,8 @@
                     </div>
                     <div class="md:w-1/2 md:pl-8">
                         <img src="dist/images/img-banner-home.png" class="img-banner desktop hidden lg:block" alt="">
-                        <img src="dist/images/mobile/img-banner-home-mobile.png" class="img-banner lg:hidden" alt="">
+                        <img src="dist/images/mobile/img-banner-home-mobile.png" class="img-banner lg:hidden mx-auto"
+                            alt="">
                         <div
                             class="featured-logos lg:hidden not-italic font-medium text-lg leading-[45px] tracking-[0.21em] uppercase pt-[1.5rem]">
                             Featured in<br>
@@ -175,14 +176,14 @@
 
 
         <!-- Session Content Home 1 -->
-        <section class="py-12">
+        <section class="py-12 lg:pb-[10rem] xl:pb-12">
             <div class="container mx-auto">
                 <div class="flex flex-wrap">
 
                     <div class="lg:w-7/12 col-span-7 hidden lg:block relative">
 
                         <div
-                            class="float-box-outside absolute top-[-10%] left-[40%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            class="float-box-outside absolute xl:top-[-7%] top-[-17%] left-[40%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
                             <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
                                 <img src="dist/images/icon-session1.png" class="mt-[-0.4rem] ml-[-5.5rem] absolute"
                                     alt="">
@@ -211,7 +212,7 @@
                         </div>
 
                         <div
-                            class="float-box-outside absolute top-[70%] left-[5%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
+                            class="float-box-outside absolute 2xl:top-[68%] xl:top-[63%] top-[82%] left-[5%] w-[345px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
                             <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
                                 <img src="dist/images/icon-session3.png" class="mt-[-0.4rem] ml-[-5.5rem] absolute"
                                     alt="">
@@ -233,7 +234,7 @@
 
                         <div class="reveal text-center lg:text-left fade-right">
                             <h2
-                                class="font-gallix-extrabold xl:pt-[0] xl:pb-[0] xl:pr-[6rem] xl:pl-[0] pt-[1rem] pb-[1rem] pr-[1.5rem] pl-[1.5rem] min-[1920px]:text-[100px] min-[1920px]:leading-[78px] xl:text-[90px] xl:leading-[68px] sm:text-[60px] sm:leading-[50px] text-[50px] leading-[40px] font-extrabold">
+                                class="font-gallix-extrabold xl:pt-[0] xl:pb-[0] xl:pr-[5rem] xl:pl-[0] pt-[1rem] pb-[1rem] pr-[1.5rem] pl-[1.5rem] min-[1920px]:text-[100px] min-[1920px]:leading-[78px] xl:text-[90px] xl:leading-[68px] sm:text-[60px] sm:leading-[50px] text-[50px] leading-[40px] font-extrabold">
                                 Safe Kids is the Internet on
                                 training wheels<span class="check-point"></span></h2>
                             <p
@@ -354,7 +355,7 @@
                 <div class="flex flex-wrap justify-center items-center">
                     <div class="w-full lg:w-5/12 reveal fade-left">
                         <h2
-                            class="font-gallix-extrabold text-[28px] sm:text-4xl sm:leading-10 xl:text-5xl xl:leading-[52px] leading-8 font-extrabold">
+                            class="font-gallix-extrabold text-[28px] text-center lg:text-left sm:text-4xl sm:leading-10 xl:text-5xl xl:leading-[52px] leading-8 font-extrabold">
                             Safe Kids AI smart
                             scans desktop chat,
                             <span class="color2">like Discord and in-game chats,to intercept bullying and grooming
@@ -362,12 +363,12 @@
                         </h2>
                     </div>
 
-                    <div class="w-full lg:w-7/12 relative">
+                    <div class="w-full px-3 lg:px-0 lg:w-7/12 relative">
 
-                        <img src="dist/images/mobile/img3-1.png" class="lg:hidden" alt="">
+                        <img src="dist/images/mobile/img3-1.png" class="lg:hidden mx-auto" alt="">
                         <div
-                            class="float-box-outside bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] bg-[#fffffff0] rounded-[20px] z-[9] w-[90%] text-left mb-[1rem] min-h-[130px] lg:min-h-[0] relative lg:absolute lg:top-[0] lg:left-[0] lg:w-[350px] lg:mb-[0] xl:w-[345px]">
-                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                            class="float-box-outside bg-transparent shadow-lg border border-[#eeeeee] shadow-[rgba(0, 0, 0, 0.07)] bg-[#fffffff0] rounded-[20px] z-[9] w-[90%] sm:max-lg:w-[60%] sm:max-lg:mx-auto text-left mb-[1rem] min-h-[130px] lg:min-h-[0] relative lg:absolute lg:top-[0] lg:left-[0] lg:w-[350px] lg:mb-[0] xl:w-[345px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px]">
                                 <img src="dist/images/icon-stop.svg" class="mt-[-0.4rem] ml-[-3.5rem] absolute" alt="">
                                 <p
                                     class="text-lg sm:text-[22px] sm:pl-[4.5rem] xl:text-[24px]  pl-[5rem] non-italic font-semibold leading-7">
@@ -375,10 +376,10 @@
                             </div>
                         </div>
 
-                        <img src="dist/images/mobile/img3-2.png" class="lg:hidden" alt="">
+                        <img src="dist/images/mobile/img3-2.png" class="lg:hidden mx-auto" alt="">
                         <div
-                            class="float-box-outside bg-transparent shadow-lg bg-[#fffffff0] shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9] w-[90%] text-left mb-[1rem] min-h-[130px] lg:min-h-[0] relative lg:absolute lg:bottom-[0] lg:left-[150px] lg:w-[350px] lg:mb-[0] xl:w-[345px]">
-                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
+                            class="float-box-outside bg-transparent shadow-lg border border-[#eeeeee] bg-[#fffffff0] shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9] w-[90%] sm:max-lg:w-[60%] sm:max-lg:mx-auto text-left mb-[1rem] min-h-[130px] lg:min-h-[0] relative lg:absolute lg:bottom-[0] lg:left-[150px] lg:w-[350px] lg:mb-[0] xl:w-[345px]">
+                            <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px]">
                                 <img src="dist/images/icon-check.svg" class="mt-[-0.4rem] ml-[-3.5rem] absolute" alt="">
                                 <p
                                     class="text-lg sm:text-[22px] sm:pl-[4.5rem] xl:text-[24px]  pl-[5rem] non-italic font-semibold leading-7">
@@ -397,8 +398,8 @@
         <!-- Session Content Home 4 -->
         <section class="py-[3rem] lg:pt-[5rem] lg:pb-0 xl:pt-[4rem] xl:pb-[1rem]">
             <div class="container mx-auto">
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0 hidden lg:block relative">
+                <div class="flex flex-wrap items-center">
+                    <div class="w-full lg:w-6/12 hidden lg:block relative">
                         <div
                             class="float-box-outside absolute top-[-100px] left-[0] w-[295px] bg-transparent shadow-lg shadow-[rgba(0, 0, 0, 0.07)] rounded-[20px] z-[9]">
                             <div class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE]">
@@ -437,9 +438,9 @@
                         </div>
                     </div>
 
-                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0 box-session-content-home4 reveal fade-right">
+                    <div class="w-full lg:w-6/12 reveal fade-right">
                         <h2
-                            class="font-gallix-extrabold text-[28px] leading-[32px] sm:text-[38px] xl:text-[48px] xl:leading-[52px] sm:leading-[42px] md:pt-[6rem] md:pb-[2rem] md:pl-[7rem] xl:pt-[11rem] xl:pr-[5rem] xl:pb-[0] xl:pl-[3rem] 2xl:pt-[12rem] 2xl:pr-[2rem] 2xl:pb-[0] 2xl:pl-[3rem] min-[1920px]:pt-[9rem] min-[1920px]:pr-[5rem] min-[1920px]:pl-[5rem]  pb-[2rem] font-extrabold">
+                            class="text-center lg:text-left font-gallix-extrabold text-[28px] leading-[32px] sm:text-[38px] xl:text-[48px] xl:leading-[52px] sm:leading-[42px] md:pb-[2rem] xl:pr-[5rem] xl:pb-[0] lg:pl-[5rem] xl:pl-[3rem] 2xl:pr-[2rem] 2xl:pb-[0] 2xl:pl-[3rem]  min-[1920px]:pr-[5rem] min-[1920px]:pl-[5rem]  pb-[2rem] font-extrabold">
                             Safe
                             Kids AI smart
                             scans URLS and website content,
@@ -450,7 +451,7 @@
 
 
                     <!-- SLIDER -->
-                    <div class="lg:hidden">
+                    <div class="lg:hidden text-center mx-auto">
 
                         <div class="slider-session-content-home4">
 
@@ -460,7 +461,7 @@
                                     <div class="scan-overlay"></div>
                                 </div>
                                 <div
-                                    class="float-box-outside w-[90%] relative text-left top-[-1rem] mb-[1rem] shadow-[none] min-h-[130px] bg-transparent rounded-[20px] z-[9] md:top-[-6rem] md:max-w-[350px] mx-auto">
+                                    class="float-box-outside w-[90%] relative text-left mb-[1rem] shadow-[none] min-h-[130px] bg-transparent rounded-[20px] z-[9]  md:max-w-[350px] mx-auto">
                                     <div
                                         class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE] min-h-[130px]">
                                         <img src="dist/images/icon-check.svg" class="absolute mt-[-0.4rem] ml-[-3.5rem]"
@@ -477,7 +478,7 @@
                             <div class="w-full">
                                 <div class="blocked-image-wrapper" id="blocked-image"></div>
                                 <div
-                                    class="float-box-outside w-[90%] relative text-left top-[-1rem] mb-[1rem] shadow-[none] min-h-[130px] bg-transparent rounded-[20px] z-[9] md:top-[-6rem] md:max-w-[350px] mx-auto">
+                                    class="float-box-outside w-[90%] relative text-left  mb-[1rem] shadow-[none] min-h-[130px] bg-transparent rounded-[20px] z-[9]  md:max-w-[350px] mx-auto">
                                     <div
                                         class="py-[1.5rem] px-[1rem] bg-[#fffffff0] rounded-[20px] border border-[#EEEEEE] min-h-[130px]">
                                         <img src="dist/images/icon-stop.svg" class="absolute mt-[-0.4rem] ml-[-3.5rem]"
@@ -510,7 +511,7 @@
 
                     <div class="w-full">
                         <h2
-                            class="font-gallix-extrabold text-[28px] leading-[32px] pb-[2rem] sm:text-[38px] sm:leading-[42px] xl:text-[48px] xl:leading-[52px] xl:pt-0 xl:pr-[10rem] xl:pb-[4rem] xl:pl-[10rem] min-[1920px]:pr-[15rem] min-[1920px]:pl-[15rem] text-center text-white font-extrabold">
+                            class="font-gallix-extrabold px-[1.5rem] sm:px-[3rem] text-[28px] leading-[32px] pb-[2rem] sm:text-[38px] sm:leading-[42px] xl:text-[48px] xl:leading-[52px] xl:pt-0 xl:pr-[10rem] xl:pb-[4rem] xl:pl-[10rem] min-[1920px]:pr-[15rem] min-[1920px]:pl-[15rem] text-center text-white font-extrabold">
                             Safe Kids is
                             password-protected
                             so even the most tech-savvy kids
@@ -593,20 +594,20 @@
             </div>
 
             <div id="session-content-home6" class="container mx-auto py-8">
-                <div class="flex flex-wrap">
+                <div class="flex flex-wrap items-center">
 
-                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0 column-session-content-home6">
+                    <div class="w-full lg:w-6/12">
                         <h2
-                            class="font-gallix-extrabold text-[50px] leading-[40px] md:text-[80px] md:leading-[70px] md:mt-[7rem] lg:text-[70px] lg:leading-[60px] lg:mt-[11rem] xl:text-[106px] xl:leading-[100px] xl:mt-[0] min-[1920px]:text-[120px] min-[1920px]:leading-[120px] font-extrabold">
+                            class="font-gallix-extrabold mb-[1rem] text-[50px] leading-[40px] md:text-[80px] md:leading-[70px] lg:text-[70px] lg:leading-[60px] xl:text-[106px] xl:leading-[100px] min-[1920px]:text-[120px] min-[1920px]:leading-[120px] font-extrabold">
                             Safe Kids AI
                             identifies</h2>
                         <p
-                            class="text-[28px] leading-[32px] py-[1rem] px-[1.5rem] font-extrabold md:text-[38px] md:leading-[42px] md:px-0 md:py-0 xl:text-[48px] xl:leading-[52px]">
+                            class="font-gallix-extrabold text-[28px] leading-[32px] py-[1rem] px-[1.5rem] font-extrabold md:text-[38px] md:leading-[42px] md:px-0 md:py-0 xl:text-[48px] xl:leading-[52px]">
                             intent-based behavior to catch red flag searches before other platforms might.
                         </p>
                     </div>
 
-                    <div class="w-full lg:w-6/12 px-4 mb-8 md:mb-0">
+                    <div class="w-full lg:w-6/12">
                         <img src="dist/images/img6.png"
                             class="sm:right-[-7rem] md:right-[-2rem] lg:right-[-9rem] lg:w-[110%] lg:pt-[3rem] xl:right-[-5rem] xl:w-[100%] 2xl:right-[-20rem] min-[1920px]:right-[5rem] min-[1920px]:pt-[0] right-[-20px]  reveal fade-right"
                             alt="">
@@ -617,54 +618,55 @@
         </section>
 
         <!-- Footer -->
-        <div id="footer"
-            class="px-[1rem] absolute bottom-[1.5rem] mx-auto w-[100%] text-center lg:px-[5%] xl:px-[7%] min-[1920px]:px-[14%]">
+        <div class="absolute bottom-[1.5rem] w-[100%] text-center">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap text-[#ffffff80] text-sm ">
 
-            <div class="flex flex-wrap text-[#ffffff80] text-sm ">
-
-                <div class="w-full md:w-5/12 md:text-left text-center">
-                    <a href="https://www.safekids.ai/">
-                        <img src="dist/images/logo-footer.svg" class="mx-auto md:mx-0" alt="">
-                    </a>
-                    <p class="text-lg leading-[22px] py-[1rem] font-normal">Our mission is to keep kids safe online.
-                        Safe
-                        Kids is
-                        developed by kids, mental health experts and supported by a world-class advisory team.</p>
-                    <div class="ml-[-0.7rem]">
-                        <a href="mailto:support@safekids.ai"
-                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Contact
-                            us</a>
-                        <span>|</span>
-                        <a href="privacy-policy"
-                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Privacy</a>
-                        <span>|</span>
-                        <a href="terms-and-conditions"
-                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Terms &
-                            Conditions</a>
+                    <div class="w-full md:w-5/12 md:text-left text-center">
+                        <a href="https://www.safekids.ai/">
+                            <img src="dist/images/logo-footer.svg" class="mx-auto md:mx-0" alt="">
+                        </a>
+                        <p class="text-lg leading-[22px] py-[1rem] font-normal">Our mission is to keep kids safe online.
+                            Safe
+                            Kids is
+                            developed by kids, mental health experts and supported by a world-class advisory team.</p>
+                        <div class="ml-[-0.7rem]">
+                            <a href="mailto:support@safekids.ai"
+                                class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Contact
+                                us</a>
+                            <span>|</span>
+                            <a href="privacy-policy"
+                                class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Privacy</a>
+                            <span>|</span>
+                            <a href="terms-and-conditions"
+                                class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Terms &
+                                Conditions</a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="md:w-2/12 w-full"></div>
+                    <div class="md:w-2/12 w-full"></div>
 
-                <div class="md:w-5/12 w-full flex flex-col justify-between md:text-right text-center">
-                    <div class="">
-                        <a href="products"
-                            class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Products</a>
-                        <a href="how-it-works-privacy"
-                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">How it
-                            works</a>
-                        <a href="patents"
-                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Patents</a>
-                        <a href="opensource"
-                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Opensource</a>
-                        <a href="about-us"
-                            class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">About</a>
-                        <!--<a href="https://app.safekids.ai/signin" target="_blank" class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Login</a>-->
+                    <div class="md:w-5/12 w-full flex flex-col justify-between md:text-right text-center">
+                        <div class="">
+                            <a href="products"
+                                class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Products</a>
+                            <a href="how-it-works-privacy"
+                                class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">How
+                                it
+                                works</a>
+                            <a href="patents"
+                                class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Patents</a>
+                            <a href="opensource"
+                                class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Opensource</a>
+                            <a href="about-us"
+                                class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">About</a>
+                            <!--<a href="https://app.safekids.ai/signin" target="_blank" class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Login</a>-->
+                        </div>
+                        <div class="pt-[2rem] xl:pt-0">© 2023 Safe Kids LLC. All Rights
+                            Reserved.</div>
                     </div>
-                    <div class="pt-[2rem] xl:pt-0">© 2023 Safe Kids LLC. All Rights
-                        Reserved.</div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
@@ -681,7 +683,7 @@
             // Document click event handler to remove class if clicked outside the div
             $(document).click(function (event) {
                 if (!$(event.target).closest('#myDiv').length) { // Check if clicked outside the div
-                    $("#mobile-navigation").removeClass("hidden"); // Remove 'highlight' class from the div
+                    $("#mobile-navigation").addClass("hidden"); // Remove 'highlight' class from the div
                 }
             });
         });
