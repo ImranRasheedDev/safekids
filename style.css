@@ -1,10 +1,3 @@
-/*
-Theme Name: SafeKids
-Autor: Studio Gabriel de Gennaro
-Description: 
-Version: 1.0
-*/
-
 html {
   margin: 0 !important;
   scroll-behavior: smooth;
@@ -138,9 +131,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
 }
-section#site-main {
-  padding: 10rem 0 0;
-}
+
 .h1,
 h1 {
   font-size: 2.5rem;
@@ -168,19 +159,7 @@ img.img {
 .red {
   color: #ff2f4e !important;
 }
-.border-btn-small {
-  /*max-width: 240px;
-    background: rgb(36,169,255);
-    background: linear-gradient(167deg, rgba(36,169,255,1) 25%, rgba(124,0,235,1) 75%);
-    padding: 1px 1px 1px 1px;
-    border-radius: 14px;
-    margin-top: 0rem;
-    transition: 0.5s;*/
-}
-.border-btn-small:hover {
-  /*margin: 0;
-    background: linear-gradient(167deg, rgba(36,169,255,1) 25%, rgba(124,0,235,1) 75%);*/
-}
+
 button.btn.small {
   font-weight: 600;
   font-size: 16px;
@@ -198,14 +177,7 @@ button.btn.small {
   max-width: 265px;
 }
 
-/*
- font-semibold text-base leading-7 text-center
- text-white py-[0.5rem] pr-0 pl[1.5rem] m-0 shadow-[0px 1px 36px rgba(0, 0, 0, 0.07)] rounded-[20px]
-  
- */
-
 button.btn.small:hover {
-  /*background: linear-gradient(167deg, rgba(36,169,255,1) 25%, rgba(124,0,235,1) 75%);*/
   transition: 0.5s;
   background: linear-gradient(79.04deg, #ff8e15 8.46%, #ff2f4e 202.45%);
   transition: 0.2s;
@@ -287,38 +259,40 @@ img.img-content:hover {
   animation: fade-right 1s ease-in-out;
 }
 
-.loading-overlay {
+/* Loader styles */
+.loader-wrapper {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000e0;
+  background-color: #000; /* semi-transparent background */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 9999; /* Ensure loader stays on top */
 }
 
-.loading-spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animation */
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
 
-#contentWrapper {
+/* Hide loader when content is loaded */
+.loaded .loader-wrapper {
   display: none;
 }
 
@@ -388,15 +362,7 @@ header img.logo:hover {
   z-index: 999;
   margin-top: -1px;
 }
-header.header-fixed img.logo {
-  /*-webkit-transform: scale(0.9);
-    transition: 1s;
-    margin-left: -1rem;
-    filter: brightness(0) invert(1);*/
-}
-header.header-fixed .navbar-light .navbar-toggler-icon {
-  /*filter: brightness(0) invert(1);*/
-}
+
 .navbar-toggler-icon {
   width: 20px;
   height: 20px;
@@ -951,6 +917,23 @@ button.btn.small2 {
   width: auto;
 }
 
+.modal-close-button {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  font-size: 28px;
+  background-color: red !important;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  z-index: 1000;
+  padding: 0;
+}
+
 @keyframes dot-animation {
   0% {
     transform: translateX(0);
@@ -1227,6 +1210,13 @@ section#session-content-home5 {
   background: url(dist/images/bg-footer.svg);
   background-size: 104%;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1919px) {
+  section#session-content-home5 {
+    padding: 16rem 0 2rem;
+    background-size: 112%;
+  }
 }
 
 @media (max-width: 1366px) {

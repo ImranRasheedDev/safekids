@@ -29,26 +29,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function () {
-            setTimeout(function () {
 
-                // Fade in duration: 1 second 
-                $("#contentWrapper").fadeIn(1000);
-                $(".loading-overlay").fadeOut(1000);
-
-                // Fade out duration: 1 second 
-                // Display loading overlay for 1 second 
-            }, 1000);
-        }); 
-    </script>
 </head>
 
 <body>
-    <div class="loading-overlay">
-        <div class="loading-spinner">
-
-        </div>
+    <div class="loader-wrapper">
+        <div class="loader"></div>
     </div>
     <div id="contentWrapper">
         <header>
@@ -176,33 +162,13 @@
                 <div class="lg:w-8/12 w-full lg:mx-auto relative">
                     <img src="dist/images/about-us/aahil-founder-play.png" alt="">
                     <span class="pulse-button absolute top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]">
-                        <a href="#" id="play-video" data-toggle="modal" data-target="#video-modal">
+                        <a href="javascript:void(0)" id="showModalButton">
                             <img src="dist/images/about-us/play.svg" alt="" class="w-[100px] h-[100px]">
                         </a>
                     </span>
                 </div>
             </div>
         </section>
-
-
-
-        <!-- MODAL VIDEO - ABOUT US / HOW IT WORKS PRIVACY-->
-        <!-- <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modal-label"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <iframe id="video" width="100%" height="431" src="https://www.youtube.com/embed/E7vhpFryVAc"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- MODAL VIDEO -->
-
 
         <!-- Session Content About Us 4 -->
         <section>
@@ -229,7 +195,7 @@
                                 "Pause,
                                 Reflect and Redirect," which transforms children's behavior, enabling them to...</p>
                             <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
-                                <a>
+                                <a href="javascript:void(0)" id="showAahilBio">
                                     Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
                                 </a>
                             </div>
@@ -252,7 +218,7 @@
                                 resulting in constant parental
                                 surveillance. His objective was to develop software that prioritizes...</p>
                             <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
-                                <a>
+                                <a href="javascript:void(0)" id="showZohranBio">
                                     Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
                                 </a>
                             </div>
@@ -262,9 +228,6 @@
             </div>
         </section>
 
-
-
-
         <!-- Session Content About Us 5 -->
         <section class="lg:pt-[6rem] pt-[3rem]">
             <div class="container mx-auto">
@@ -272,11 +235,12 @@
                     class="text-center font-extrabold font-gallix-extrabold text-[50px] leading-[40px] px-[1.5rem] lg:px-0 py-[1.5rem] sm:text-[60px] sm:leading-[50px] xl:text-[80px] xl:leading-[65px] 2xl:text-[80px] 2xl:leading-[65px] min-[1920px]:text-[100px] min-[1920px]:leading-[78px]">
                     Advisors<span class="check-point"></span></h2>
 
-                <div class="grid lg:grid-cols-3 gap-4 mt-[4rem]">
+                <div class="grid lg:grid-cols-3 gap-x-4 gap-y-10 mt-[4rem]">
 
                     <div class="text-center reveal fade-bottom">
                         <div>
-                            <img class="mx-auto" src="dist/images/about-us/judith-o-rorke-trigiani.png" alt="">
+                            <img class="mx-auto w-[221px] h-[221px]"
+                                src="dist/images/about-us/judith-o-rorke-trigiani.png" alt="">
                             <h6
                                 class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
                                 Judith O’Rorke-Trigiani, PhD</h6>
@@ -292,7 +256,7 @@
                                 teaching...
                             </p>
                             <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
-                                <a data-bs-toggle="modal" data-bs-target="#modal-007">
+                                <a href="javascript:void(0)" id="showAdvisor1">
                                     Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
                                 </a>
                             </div>
@@ -301,7 +265,8 @@
 
                     <div class="text-center reveal fade-bottom">
                         <div class="box-user-about-us">
-                            <img class="mx-auto" src="dist/images/about-us/allen-j-klein.png" alt="">
+                            <img class="mx-auto w-[221px] h-[221px]" src="dist/images/about-us/allen-j-klein.png"
+                                alt="">
                             <h6
                                 class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
                                 Allen J. Klein PLLC</h6>
@@ -314,16 +279,39 @@
                                 at
                                 ShawPittman (now Pillsbury Shaw Pittman) and then Latham & Watkins, and on his own since
                                 retiring from Latham nearly a decade ago, he has represented clients in...</p>
-                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]"><a
-                                    data-bs-toggle="modal" data-bs-target="#modal-008">Full Bio <img class="inline"
-                                        src="dist/images/about-us/icon-bio.svg" alt=""></a>
+                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
+                                <a href="javascript:void(0)" id="showAdvisor2">
+                                    Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center reveal fade-bottom">
+                        <div class="box-user-about-us">
+                            <img class="mx-auto w-[221px] h-[221px]" src="dist/images/about-us/pam-wisniewski.png"
+                                alt="">
+                            <h6
+                                class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                                Pam Wisniewski, PhD</h6>
+                            <p
+                                class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                                Advisory Board</p>
+                            <p class="px-[0.4rem] lg:px-[1rem]">Allen has spent the last 30 years at the intersection of
+                                Dr. Wisniewski is an Associate Professor in Human-Computer Interaction whose work lies
+                                at the intersection of Social Computing and Privacy. She is an expert in the interplay
+                                between social media, privacy, and online safety for adolescents. She has authored...
+                            </p>
+                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
+                                <a href="javascript:void(0)" id="showAdvisor3">
+                                    Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="text-center reveal fade-bottom">
                         <div>
-                            <img class="mx-auto" src="dist/images/about-us/annie-khalid.png" alt="">
+                            <img class="mx-auto w-[221px] h-[221px]" src="dist/images/about-us/annie-khalid.png" alt="">
                             <h6
                                 class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
                                 Annie H. Khalid</h6>
@@ -337,16 +325,18 @@
                                 is passionate about privacy andonline safety for children. As a longstanding community
                                 volunteer
                                 and advocate for youth and education initiatives, she is very honored...</p>
-                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]"><a
-                                    data-bs-toggle="modal" data-bs-target="#modal-011">Full Bio <img class="inline"
-                                        src="dist/images/about-us/icon-bio.svg" alt=""></a>
+                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
+                                <a href="javascript:void(0)" id="showAdvisor4">
+                                    Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="text-center reveal fade-bottom">
                         <div>
-                            <img class="mx-auto" src="dist/images/about-us/hasnain-aslam.png" alt="">
+                            <img class="mx-auto w-[221px] h-[221px]" src="dist/images/about-us/hasnain-aslam.png"
+                                alt="">
                             <h6
                                 class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
                                 Hasnain Aslam</h6>
@@ -360,16 +350,18 @@
                                 since
                                 its
                                 inception in 2002. He serves on the boards of several TRG companies...</p>
-                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]"><a
-                                    data-bs-toggle="modal" data-bs-target="#modal-012">Full Bio <img class="inline"
-                                        src="dist/images/about-us/icon-bio.svg" alt=""></a>
+                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
+                                <a href="javascript:void(0)" id="showAdvisor5">
+                                    Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="text-center reveal fade-bottom">
                         <div>
-                            <img class="mx-auto" src="dist/images/about-us/abbas-valliani.png" alt="">
+                            <img class="mx-auto w-[221px] h-[221px]" src="dist/images/about-us/abbas-valliani.png"
+                                alt="">
                             <h6
                                 class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
                                 Abbas Valliani</h6>
@@ -383,17 +375,16 @@
                                 career to improving the way kids live and learn online. Most notably, Abbas served as
                                 co-founder
                                 and Managing Director of Primatics Financial (sold to SS&C), a...</p>
-                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]"><a
-                                    data-bs-toggle="modal" data-bs-target="#modal-004">Full Bio <img class="inline"
-                                        src="dist/images/about-us/icon-bio.svg" alt=""></a>
+                            <div class="text-[#ff1d43] text-[22px] cursor-pointer no-underline pt-[1rem]">
+                                <a href="javascript:void(0)" id="showAdvisor6">
+                                    Full Bio <img class="inline" src="dist/images/about-us/icon-bio.svg" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
 
         <section id="session-content-about-us6">
             <div class="text-center mx-auto lg:w-8/12 w-full text-white">
@@ -420,7 +411,7 @@
                 <div class="flex flex-wrap text-[#ffffff80] text-sm ">
 
                     <div class="w-full lg:w-5/12 lg:text-left text-center">
-                        <a href="https://www.safekids.ai/">
+                        <a href="index.html">
                             <img src="dist/images/logo-footer.svg" class="mx-auto lg:mx-0" alt="">
                         </a>
                         <p class="text-lg leading-[22px] py-[1rem] font-normal">Our mission is to keep kids safe online.
@@ -432,10 +423,10 @@
                                 class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Contact
                                 us</a>
                             <span>|</span>
-                            <a href="privacy-policy"
+                            <a href="privacy-policy.html"
                                 class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Privacy</a>
                             <span>|</span>
-                            <a href="terms-and-conditions"
+                            <a href="terms-and-conditions.html"
                                 class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Terms &
                                 Conditions</a>
                         </div>
@@ -445,17 +436,17 @@
 
                     <div class="lg:w-5/12 w-full flex flex-col justify-between lg:text-right text-center">
                         <div class="">
-                            <a href="products"
+                            <a href="products.html"
                                 class="text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Products</a>
-                            <a href="how-it-works-privacy"
+                            <a href="how-it-works-privacy.html"
                                 class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">How
                                 it
                                 works</a>
-                            <a href="patents"
+                            <a href="patents.html"
                                 class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Patents</a>
-                            <a href="opensource"
+                            <a href="opensource.html"
                                 class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Opensource</a>
-                            <a href="about-us"
+                            <a href="about-us.html"
                                 class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">About</a>
                             <!--<a href="https://app.safekids.ai/signin" target="_blank" class="ml-4 text-sm font-medium leading-[19px] text-white no-underline px-[0.8rem]">Login</a>-->
                         </div>
@@ -469,699 +460,528 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            // Button click event handler
-            $("#haeder-menu-button").click(function (event) {
-                event.stopPropagation(); // Prevent click event from bubbling up to the document
-                $("#mobile-navigation").toggleClass("hidden"); // Toggle 'highlight' class on the div
-            });
 
-            // Document click event handler to remove class if clicked outside the div
-            $(document).click(function (event) {
-                if (!$(event.target).closest('#myDiv').length) { // Check if clicked outside the div
-                    $("#mobile-navigation").addClass("hidden"); // Remove 'highlight' class from the div
-                }
-            });
-        });
-    </script>
-    <!-- ANIMATION INTRO -->
-    <script>
-        function load() {
-            var loads = document.querySelectorAll(".load");
-
-            for (var i = 0; i < loads.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = loads[i].getBoundingClientRect().top;
-                var elementVisible = 30;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    loads[i].classList.add("active");
-                } else {
-                    loads[i].classList.remove("active");
-                }
-            }
-        }
-
-        window.addEventListener("load", load);
-    </script>
-
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-    </script>
-    <!-- ANIMATION INTRO -->
-
-    <!-- HEADER FIXED -->
-    <script>
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 1) {
-                $("header").addClass("header-fixed");
-            } else {
-                $("header").removeClass("header-fixed");
-            }
-        });
-    </script>
-
-    <script>
-        $(".nav-link").click(function () {
-            $("#navbarScroll").removeClass("show");
-        });
-    </script>
-    <!-- HEADER FIXED -->
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-
-    <script>
-        document.addEventListener('wpcf7mailsent', function (event) {
-            Swal.fire({
-                title: 'Sent with success!',
-                icon: 'success'
-            })
-            ga('gtm2.send', 'event', 'Formulário', 'Envio', 'Formulário');
-        }, false);
-    </script>
-</body>
-
-</html>
-
-
-<!-- Modal Praneeth Bedapudi -->
-<!-- <div class="modal fade" id="modal-001" tabindex="-1" aria-labelledby="modal-001Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-001Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/praneeth-bedapudi.png" alt="">
-                            <h6 class="session-content-about-us4">Praneeth Bedapudi</h6>
-                            <p class="position">Lead Developer ML/AI/NLP</p>
-                        </div>
+    <div id="AahilBio"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Praneeth has been a Machine learning and AI Engineer since his graduation
-                            from
-                            IIT Guwahati. He has extensive experience in building and productizing NLP, Speech
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAahilBio">X</button>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/aahil-valliani.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Aahil Valliani</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Founder and CEO</p>
+                    </div>
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Aahil founded Safe Kids after
+                            discovering
+                            the
+                            ineffectiveness
                             and
-                            Computer Vision models. He has open sourced several fairly popular projects and
-                            modules
-                            related to AI and ML and has played a pivotal role in the acquisition of the startup
-                            where
-                            he previously worked. Praneeth is extremely passionate about building practical,
-                            useful
-                            products using ML and AI and getting them to work on various device architectures.
+                            counterproductivity of
+                            existing
+                            parental control solutions. He patented the mental health framework called "Pause, Reflect
+                            and
+                            Redirect," which transforms children's behavior, enabling them to prioritize healthy
+                            internet
+                            usage.
+                            Currently, Aahil is a student at Thomas Jefferson High School for Science and Technology,
+                            renowned
+                            as the country's top public school. His interests encompass writing poetry, playing squash,
+                            and
+                            participating in the school's Lacrosse team. Additionally, he is an enthusiastic chess
+                            player.
                         </p>
                     </div>
-
                 </div>
 
             </div>
         </div>
+
     </div>
-</div>
-
-
-
-<div class="modal fade" id="modal-002" tabindex="-1" aria-labelledby="modal-002Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-002Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/aahil-valliani.png" alt="">
-                            <h6 class="session-content-about-us4">Aahil Valliani</h6>
-                            <p class="position">Founder and CEO</p>
-                        </div>
+    <div id="ZohranBio"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Aahil founded Safe Kids after discovering the ineffectiveness and
-                            counterproductivity of existing parental control solutions. He patented the mental
-                            health
-                            framework called "Pause, Reflect and Redirect," which transforms children's
-                            behavior,
-                            enabling them to prioritize healthy internet usage. Currently, Aahil is a student at
-                            Thomas
-                            Jefferson High School for Science and Technology, renowned as the country's top
-                            public
-                            school. His
-                            interests encompass writing poetry, playing squash, and participating in the
-                            school's
-                            Lacrosse team. Additionally, he is an enthusiastic chess player. </p>
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideZohranBio">X</button>
                     </div>
-
+                </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/zohran-valliani.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Zohran Valliani</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Founder and CTO</p>
+                    </div>
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Zohran established Safe Kids in response to the prevailing negative atmosphere created by
+                            parental control solutions and their, constant parental surveillance. His objective was to
+                            develop software that prioritizes trust and communication within families. Zohran possesses
+                            a profound passion for technology, having begun writing programmatic code at the tender age
+                            of 6. He has advanced his skills by constructing machine-learning algorithms utilizing
+                            Tensorflow/Python and creating Chrome extensions using JavaScript and TypeScript on Node.js.
+                            During his leisure time, Zohran indulges in activities such as playing chess, squash, and
+                            the enchanting melodies of the cello.
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </div>
+
     </div>
-</div>
-
-
-<div class="modal fade" id="modal-003" tabindex="-1" aria-labelledby="modal-003Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-003Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/zohran-valliani.png" alt="">
-                            <h6 class="session-content-about-us4">Zohran Valliani</h6>
-                            <p class="position">Founder and CTO</p>
-                        </div>
+    <div id="Advisor1"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Zohran established Safe Kids in response to the prevailing negative
-                            atmosphere
-                            created by parental control solutions and
-                            their, constant
-                            parental surveillance. His objective was to develop software that prioritizes trust
-                            and
-                            communication within families. Zohran possesses a profound passion for technology,
-                            having
-                            begun writing programmatic code at the tender age of 6. He has advanced his skills
-                            by
-                            constructing machine-learning algorithms utilizing Tensorflow/Python and creating
-                            Chrome
-                            extensions using JavaScript and TypeScript on Node.js. During his leisure time,
-                            Zohran
-                            indulges in activities such as playing chess, squash, and the enchanting melodies of
-                            the
-                            cello. </p>
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAdvisor1">X</button>
                     </div>
-
                 </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-004" tabindex="-1" aria-labelledby="modal-004Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-004Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/abbas-valliani.png" alt="">
-                            <h6 class="session-content-about-us4">Abbas Valliani</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/judith-o-rorke-trigiani.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Judith O’Rorke-Trigiani, PhD</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Advisory Board</p>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Abbas is an entrepreneur who has built successful companies and is now
-                            dedicating
-                            his career to improving the way kids live and learn online. Most notably, Abbas
-                            served
-                            as
-                            co-founder and Managing Director of Primatics Financial (sold to SS&C), a pioneering
-                            fintech
-                            company with some of the largest clients in the banking industry and Infinitelogic,
-                            Inc,
-                            a
-                            family-owned private equity company. He is extremely passionate about SafeKids and
-                            his
-                            mission is to get Safe Kids on every laptop and device that kids use daily.</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-005" tabindex="-1" aria-labelledby="modal-005Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-005Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/arya-bharath.png" alt="">
-                            <h6 class="session-content-about-us4">Arya Bharath</h6>
-                            <p class="position">ML Developer</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Arya is a sophomore at Thomas Jefferson High School for Science and
-                            Technology.
-                            At Safe Kids, he is designing large language models to utilize artificial
-                            intelligence
-                            to
-                            create prompts that can change behavior. Some of his favorite things to do are
-                            hiking,
-                            running, or playing some sports with friends or family. Besides physical activities,
-                            he
-                            loves playing games, whether it be board games like chess or video games. His
-                            favorite
-                            hobby
-                            though is collecting rocks!</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="modal fade" id="modal-007" tabindex="-1" aria-labelledby="modal-007Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-007Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/judith-o-rorke-trigiani.png"
-                                alt="">
-                            <h6 class="session-content-about-us4">Judith O’Rorke-Trigiani, PhD</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Judy brings nearly 30 years experience as a practicing school
-                            psychologist in
-                            suburban Washington, DC. She holds a doctorate in counseling and personnel services.
-                            She
-                            is
-                            a frequent guest lecturer and adjunct faculty at local universities in the DC area
-                            teaching
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Judy brings nearly 30 years experience as a practicing school psychologist in suburban
+                            Washington, DC. She holds a doctorate in counseling and personnel services. She is a
+                            frequent guest lecturer and adjunct faculty at local universities in the DC area teaching
                             about human development, school counseling, mental health, social skills, and
-                            neurodiversity. Her published works include articles on mental health,
-                            neurodiversity,
-                            and
+                            neurodiversity. Her published works include articles on mental health, neurodiversity, and
                             advocacy as well as several children’s books to meet her students’ needs. Dr.
-                            O’Rorke-Trigiani presents on these topics at state and national conferences and
-                            webinars
-                            including the American School Counselor Association and the American Counseling
-                            Association.
+                            O’Rorke-Trigiani presents on these topics at state and national conferences and webinars
+                            including the American School Counselor Association and the American Counseling Association.
                             <br><br>
                             She and her family, including two teenage boys, reside in the Maryland suburbs of
-                            Washington, D.C. and are frequent volunteers at Ronald McDonald House, the Greg
-                            Gannon
-                            Food
-                            Drive, AAUW, and other organizations helping the community. She looks forward to her
-                            next
+                            Washington, D.C. and are frequent volunteers at Ronald McDonald House, the Greg Gannon Food
+                            Drive, AAUW, and other organizations helping the community. She looks forward to her next
                             passion project keeping children safer online.
                         </p>
                     </div>
-
                 </div>
 
             </div>
         </div>
+
     </div>
-</div>
-
-<div class="modal fade" id="modal-008" tabindex="-1" aria-labelledby="modal-008Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-008Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/allen-j-klein.png" alt="">
-                            <h6 class="session-content-about-us4">Allen J. Klein PLLC</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+    <div id="Advisor2"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Allen has spent the last 30 years at the intersection of technology. As a
-                            partner
-                            at ShawPittman (now Pillsbury Shaw Pittman) and then Latham & Watkins, and on his
-                            own
-                            since
-                            retiring from Latham nearly a decade ago, he has represented clients in connection
-                            with
-                            AI
-                            agreements, SaaS agreements, technology (and other) outsourcing agreements,
-                            licensing
-                            agreements, software implementation and integration agreements, and software
-                            development
-                            agreements among others in the US, the UK, Switzerland, Netherlands, Germany,
-                            Canada,
-                            India,
-                            Mexico, and South Africa. Moreover, during his first years at Latham he worked in
-                            close
-                            coordination with the firm’s technology team leading the firm’s effort to comply
-                            with
-                            data
-                            privacy rules and regulations as it expanded globally. Allen also works as a
-                            software
-                            litigation consultant assisting attorneys litigating claims arising from failed
-                            software
-                            implementations and mediates disputes arising from technology transactions.</p>
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAdvisor2">X</button>
                     </div>
-
+                </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/allen-j-klein.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Allen J. Klein PLLC</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Advisory Board</p>
+                    </div>
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Allen has spent the last 30 years at the intersection of technology. As a partner at
+                            ShawPittman (now Pillsbury Shaw Pittman) and then Latham & Watkins, and on his own since
+                            retiring from Latham nearly a decade ago, he has represented clients in connection with AI
+                            agreements, SaaS agreements, technology (and other) outsourcing agreements, licensing
+                            agreements, software implementation and integration agreements, and software development
+                            agreements among others in the US, the UK, Switzerland, Netherlands, Germany, Canada, India,
+                            Mexico, and South Africa. Moreover, during his first years at Latham he worked in close
+                            coordination with the firm’s technology team leading the firm’s effort to comply with data
+                            privacy rules and regulations as it expanded globally. Allen also works as a software
+                            litigation consultant assisting attorneys litigating claims arising from failed software
+                            implementations and mediates disputes arising from technology transactions.
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </div>
+
     </div>
-</div>
-
-<div class="modal fade" id="modal-009" tabindex="-1" aria-labelledby="modal-009Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-009Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/pam-wisniewski.png" alt="">
-                            <h6 class="session-content-about-us4">Pam Wisniewski, PhD</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+    <div id="Advisor3"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Dr. Wisniewski is an Associate Professor in Human-Computer Interaction
-                            whose
-                            work
-                            lies at the intersection of Social Computing and Privacy. She is an expert in the
-                            interplay
-                            between social media, privacy, and online safety for adolescents. She has authored
-                            over
-                            90
-                            peer-reviewed publications and won multiple best papers (top 1%) and best paper
-                            honorable
-                            mentions (top 5%) at ACM SIGCHI conferences.
-                            <br><br>
-                            She has been awarded $4.69 million in external grant funding, including the NSF
-                            CAREER
-                            Award, and her research has been featured by popular news media outlets, including
-                            ABC
-                            News,
-                            NPR, Psychology Today, and U.S. News and World Report. She is an ACM Senior Member
-                            and
-                            the
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAdvisor3">X</button>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/pam-wisniewski.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Pam Wisniewski, PhD</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Advisory Board</p>
+                    </div>
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Dr. Wisniewski is an Associate Professor in Human-Computer Interaction whose work lies at
+                            the intersection of Social Computing and Privacy. She is an expert in the interplay between
+                            social media, privacy, and online safety for adolescents. She has authored over 90
+                            peer-reviewed publications and won multiple best papers (top 1%) and best paper honorable
+                            mentions (top 5%) at ACM SIGCHI conferences. <br> <br>
+                            She has been awarded $4.69 million in external grant funding, including the NSF CAREER
+                            Award, and her research has been featured by popular news media outlets, including ABC News,
+                            NPR, Psychology Today, and U.S. News and World Report. She is an ACM Senior Member and the
                             first and only computer scientist to be selected as a William T. Grant Scholar.
                         </p>
                     </div>
-
                 </div>
 
             </div>
         </div>
+
     </div>
-</div>
-
-<div class="modal fade" id="modal-010" tabindex="-1" aria-labelledby="modal-010Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-010Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/robert-lundin.png" alt="">
-                            <h6 class="session-content-about-us4">Robert Lundin, EdD</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+    <div id="Advisor4"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Born and raised in Northern California, Robert first arrived in Houston,
-                            Texas in
-                            1996 to begin his undergraduate studies at Rice University. He graduated with honors
-                            in
-                            the
-                            spring of 2000 with a dual degree in Political Science and Policy Studies, and
-                            earned
-                            the
-                            university’s Outstanding Senior Award.
-                            <br><br>
-                            Beginning 21 years ago as a bilingual elementary school teacher in inner-city
-                            Houston,
-                            Robert has dedicated himself to advancing educational opportunities for students as
-                            a
-                            leader
-                            in the classroom and at the campus, district, and governmental levels. He served as
-                            Assistant Commissioner of the Tennessee Department of Education, responsible for
-                            policy
-                            and
-                            oversight of more than 600 schools across the state. Prior to that, Robert served in
-                            senior
-                            leadership positions with multiple urban districts charged with leading the
-                            transformation
-                            of more than 50 elementary and secondary schools, founded his own high-performing
-                            college
-                            preparatory school devoted to low-income students and families, led an international
-                            organization serving schools in impoverished communities, and trained hundreds of
-                            prospective educators as a faculty member at Rice University and the University of
-                            St.
-                            Thomas.
-                            <br><br>
-                            In addition to his undergraduate degree, Robert holds a master’s degree in Bilingual
-                            &
-                            ESL
-                            Education from the University of St. Thomas and a doctorate in Educational
-                            Leadership
-                            from
-                            Vanderbilt University. Based on his record of service and leadership, Robert was
-                            appointed
-                            to Rice University’s National Alumni Board of Directors in 2021. Robert currently
-                            lives
-                            in
-                            Denver, Colorado, where he leads communications and strategic efforts for a
-                            turnaround
-                            low-income urban school district. He is the proud godfather of Nicholas (age 18) and
-                            Lawson
-                            (age 5), and is a doting uncle to two amazing nephews.
-                        </p>
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAdvisor4">X</button>
                     </div>
-
                 </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-011" tabindex="-1" aria-labelledby="modal-011Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-011Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/annie-khalid.png" alt="">
-                            <h6 class="session-content-about-us4">Annie H. Khalid</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/annie-khalid.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Annie H. Khalid</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Advisory Board</p>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Annie is an attorney who started her legal career as a corporate
-                            litigator at
-                            a
-                            large DC-based firm, where she also maintained an active pro bono practice
-                            advocating
-                            for
-                            disadvantaged women and children. She later moved to Silicon Valley, becoming an
-                            in-house
-                            tech attorney counseling in all business areas, including product development, data
-                            privacy,
-                            regulatory compliance and corporate/IP transactions, for consumer and enterprise
-                            software,
-                            hardware and services. Her expansive experience at both large and startup tech
-                            companies
-                            spans across a diverse range of industries, including cybersecurity, consumer
-                            electronics,
-                            fintech, social broadcasting/media, HR tech, and online/app services. Additionally,
-                            Annie
-                            has maintained a commitment to community service and the promotion of DEI
-                            initiatives.
-                            <br><br>
-                            She is a long-standing volunteer for youth programs advocating for education equity
-                            and
-                            inclusion in underserved communities and, most relevantly, passionate about online
-                            safety
-                            for children. Annie is very honored and excited to support Safe Kids in its
-                            meaningful
-                            mission to empower kids’ safety online by helping them pause, reflect and be
-                            directed to
-                            make better decisions! When not out supporting innovative technologies or youth
-                            initiatives,
-                            Annie can be found promoting physical fitness and mental wellness as an avid runner
-                            and
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Annie is an attorney who started her legal career as a corporate litigator at a large
+                            DC-based firm, where she also maintained an active pro bono practice advocating for
+                            disadvantaged women and children. She later moved to Silicon Valley, becoming an in-house
+                            tech attorney counseling in all business areas, including product development, data privacy,
+                            regulatory compliance and corporate/IP transactions, for consumer and enterprise software,
+                            hardware and services. Her expansive experience at both large and startup tech companies
+                            spans across a diverse range of industries, including cybersecurity, consumer electronics,
+                            fintech, social broadcasting/media, HR tech, and online/app services. Additionally, Annie
+                            has maintained a commitment to community service and the promotion of DEI initiatives.<br>
+                            <br>
+                            She is a long-standing volunteer for youth programs advocating for education equity and
+                            inclusion in underserved communities and, most relevantly, passionate about online safety
+                            for children. Annie is very honored and excited to support Safe Kids in its meaningful
+                            mission to empower kids’ safety online by helping them pause, reflect and be directed to
+                            make better decisions! When not out supporting innovative technologies or youth initiatives,
+                            Annie can be found promoting physical fitness and mental wellness as an avid runner and
                             yogi.
                         </p>
                     </div>
-
                 </div>
 
             </div>
         </div>
+
     </div>
-</div>
-
-<div class="modal fade" id="modal-012" tabindex="-1" aria-labelledby="modal-012Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-012Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/hasnain-aslam.png" alt="">
-                            <h6 class="session-content-about-us4">Hasnain Aslam</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+    <div id="Advisor5"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Hasnain Aslam is a founding partner and the Chief Investment Officer at
-                            The
-                            Resource Group. He has spearheaded TRG’s growth through over 25 acquisitions and
-                            divestitures since its inception in 2002. He serves on the boards of several TRG
-                            companies.
-                            Prior to TRG, Hasnain was the Director of Corporate Development at Align Technology
-                            and
-                            an
-                            investment banker at JP Morgan in New York and San Francisco. Hasnain also serves as
-                            Chairman of the Board of OPEN, Washington D.C. and as a board member of the D.C.
-                            Chapter
-                            of
-                            The Citizens Foundation USA. Hasnain has an A.B. with Honors from Harvard University
-                            and
-                            his
-                            diverse interests include car racing, squash, and studying South Asian poetry.</p>
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAdvisor4">X</button>
                     </div>
                 </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-004" tabindex="-1" aria-labelledby="modal-004Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modal-004Label">Full Bio</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <div class="row">
-
-                    <div class="col-lg-5 col-sm-12 modal-info-bio">
-                        <div class="box-user-about-us">
-                            <img class="user-about-us" src="dist/images/about-us/abbas-valliani.png" alt="">
-                            <h6 class="session-content-about-us4">Abbas Valliani</h6>
-                            <p class="position">Advisory Board</p>
-                        </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/hasnain-aslam.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Hasnain Aslam</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Advisory Board</p>
                     </div>
-
-                    <div class="col-lg-7 col-sm-12 modal-bio">
-                        <p class="bio">Abbas is an entrepreneur who has built successful companies and is now
-                            dedicating
-                            his career to improving the way kids live and learn online. Most notably, Abbas
-                            served
-                            as
-                            co-founder and Managing Director of Primatics Financial (sold to SS&C), a pioneering
-                            fintech
-                            company with some of the largest clients in the banking industry and Infinitelogic,
-                            Inc,
-                            a
-                            family-owned private equity company. He is extremely passionate about SafeKids and
-                            his
-                            mission is to get Safe Kids on every laptop and device that kids use daily.</p>
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Hasnain Aslam is a founding partner and the Chief Investment Officer at The Resource Group.
+                            He has spearheaded TRG’s growth through over 25 acquisitions and divestitures since its
+                            inception in 2002. He serves on the boards of several TRG companies. Prior to TRG, Hasnain
+                            was the Director of Corporate Development at Align Technology and an investment banker at JP
+                            Morgan in New York and San Francisco. Hasnain also serves as Chairman of the Board of OPEN,
+                            Washington D.C. and as a board member of the D.C. Chapter of The Citizens Foundation USA.
+                            Hasnain has an A.B. with Honors from Harvard University and his diverse interests include
+                            car racing, squash, and studying South Asian poetry.
+                        </p>
                     </div>
-
                 </div>
 
             </div>
         </div>
+
     </div>
-</div> -->
+    <div id="Advisor5"
+        class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000] px-[12px] xl:px-0">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-6xl sm:p-6 max-h-[90vh] overflow-y-auto">
+                <div class="flex justify-between items-center border-b-2 border-indigo-500] pb-[1rem] mb-[1.5rem]">
+                    <div class="text-left">
+                        <h5>Full Bio</h5>
+                    </div>
+                    <div class="text-right">
+                        <button type="button" class="inline" id="hideAdvisor4">X</button>
+                    </div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-4">
+                    <div class="text-center">
+                        <img class="mx-auto" src="dist/images/about-us/hasnain-aslam.png" alt="">
+                        <h6
+                            class="text-[20px] leading-[20px] pt-[1rem] font-bold md:text-[24px] md:leading-[24px] md:pt-[1.5rem]">
+                            Abbas Valliani</h6>
+                        <p
+                            class="text-[20px] leading-[20px] font-semibold opacity-50 md:text-[24px] md:leading-[24px] pt-[0.5rem] pb-[1rem]">
+                            Advisory Board</p>
+                    </div>
+                    <div>
+                        <p class="lg:text-[24px] lg:leading-[36px] text-lg leading-[28px] text-center lg:text-left">
+                            Abbas is an entrepreneur who has built successful companies and is now dedicating his career
+                            to improving the way kids live and learn online. Most notably, Abbas served as co-founder
+                            and Managing Director of Primatics Financial (sold to SS&C), a pioneering fintech company
+                            with some of the largest clients in the banking industry and Infinitelogic, Inc, a
+                            family-owned private equity company. He is extremely passionate about SafeKids and his
+                            mission is to get Safe Kids on every laptop and device that kids use daily.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="myModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000]">
+        <div class="flex justify-center items-center h-full">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-2xl sm:p-6">
+                <button type="button" id="hideModalButton" class="modal-close-button">
+                    x
+                </button>
+                <div>
+                    <iframe id="video" width="100%" height="431"
+                        src="https://www.youtube.com/embed/E7vhpFryVAc?autoplay=1" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            var videoSrc = $('#video')[0].src;
+
+            // Show modal when button is clicked
+            $("#showModalButton").click(function () {
+                $("#myModal").removeClass("hidden");
+                $('html, body').addClass('no-scroll');
+                $('#video')[0].src = videoSrc + "?autoplay=1"; // Start the video
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideModalButton").click(function () {
+                $("#myModal").addClass("hidden");
+                $('html, body').removeClass('no-scroll');
+                $('#video')[0].src = ""; // Stop the video
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAahilBio").click(function () {
+                $("#AahilBio").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAahilBio").click(function () {
+                $("#AahilBio").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showZohranBio").click(function () {
+                $("#ZohranBio").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideZohranBio").click(function () {
+                $("#ZohranBio").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAdvisor1").click(function () {
+                $("#Advisor1").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAdvisor1").click(function () {
+                $("#Advisor1").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAdvisor2").click(function () {
+                $("#Advisor2").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAdvisor2").click(function () {
+                $("#Advisor2").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAdvisor3").click(function () {
+                $("#Advisor3").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAdvisor3").click(function () {
+                $("#Advisor3").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAdvisor4").click(function () {
+                $("#Advisor4").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAdvisor4").click(function () {
+                $("#Advisor4").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAdvisor5").click(function () {
+                $("#Advisor5").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAdvisor5").click(function () {
+                $("#Advisor5").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            // Show modal when button is clicked
+            $("#showAdvisor6").click(function () {
+                $("#Advisor6").removeClass("hidden");
+                $('html, body').addClass('overflow-y-hidden');
+            });
+
+            // Hide modal when close button is clicked
+            $("#hideAdvisor6").click(function () {
+                $("#Advisor6").addClass("hidden");
+                $('html, body').removeClass('overflow-y-hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
