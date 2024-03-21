@@ -162,7 +162,7 @@
                 <div class="lg:w-8/12 w-full lg:mx-auto relative">
                     <img src="dist/images/about-us/aahil-founder-play.png" alt="">
                     <span class="pulse-button absolute top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%]">
-                        <a href="javascript:void(0)" id="showModalButton">
+                        <a href="javascript:void(0)" id="showModalButton2">
                             <img src="dist/images/about-us/play.svg" alt="" class="w-[100px] h-[100px]">
                         </a>
                     </span>
@@ -816,7 +816,7 @@
 
     </div>
 
-    <div id="myModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000]">
+    <div id="myModal2" class="hidden fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-[1000]">
         <div class="flex justify-center items-center h-full">
             <div
                 class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all w-full sm:max-w-2xl sm:p-6">
@@ -824,9 +824,9 @@
                     x
                 </button>
                 <div>
-                    <iframe id="video" width="100%" height="431"
-                        src="https://www.youtube.com/embed/E7vhpFryVAc?autoplay=1" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe id="video1" width="100%" height="431" src="https://www.youtube.com/embed/E7vhpFryVAc"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
                     </iframe>
                 </div>
             </div>
@@ -836,20 +836,20 @@
     <script src="custom.js"></script>
     <script>
         $(document).ready(function () {
-            var videoSrc = $('#video')[0].src;
+            var videoSrc = $('#video1')[0].src;
 
             // Show modal when button is clicked
-            $("#showModalButton").click(function () {
-                $("#myModal").removeClass("hidden");
+            $("#showModalButton2").click(function () {
+                $("#myModal2").removeClass("hidden");
                 $('html, body').addClass('no-scroll');
-                $('#video')[0].src = videoSrc + "?autoplay=1"; // Start the video
+                $('#video1')[0].src = videoSrc + "?autoplay=1"; // Start the video
             });
 
             // Hide modal when close button is clicked
             $("#hideModalButton").click(function () {
-                $("#myModal").addClass("hidden");
+                $("#myModal2").addClass("hidden");
                 $('html, body').removeClass('no-scroll');
-                $('#video')[0].src = ""; // Stop the video
+                $('#video1')[0].src = ""; // Stop the video
             });
         });
     </script>
