@@ -7,41 +7,95 @@ body {
   overflow-x: hidden;
 }
 
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  width: 100% !important;
-  padding-left: 12px;
+/* MEDIA SCREEN */
+
+.container-custom,
+.container-custom-fluid,
+.container-custom-lg,
+.container-custom-md,
+.container-custom-sm,
+.container-custom-xl,
+.container-custom-xxl {
+  width: 100%;
   padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* MEDIA SCREEN */
+@media (min-width: 576px) {
+  .container-custom,
+  .container-custom-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1366px) {
+  .container-custom,
+  .container-custom-lg,
+  .container-custom-md,
+  .container-custom-sm {
+    max-width: 1300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-custom,
+  .container-custom-md,
+  .container-custom-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-custom,
+  .container-custom-lg,
+  .container-custom-md,
+  .container-custom-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-custom,
+  .container-custom-lg,
+  .container-custom-md,
+  .container-custom-sm,
+  .container-custom-xl {
+    max-width: 1140px;
+  }
+}
+
 @media (min-width: 1920px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1440px !important;
-  }
-}
-@media (min-width: 1400px) and (max-width: 1919px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1280px !important;
+  .container-custom,
+  .container-custom-lg,
+  .container-custom-md,
+  .container-custom-sm,
+  .container-custom-xl,
+  .container-custom-xxl {
+    max-width: 1440px;
   }
 }
 
-/* MEDIA SCREEN */
+@media (min-width: 1400px) and (max-width: 1919px) {
+  .container-custom,
+  .container-custom-lg,
+  .container-custom-md,
+  .container-custom-sm,
+  .container-custom-xl,
+  .container-custom-xxl {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container-custom,
+  .container-custom-lg,
+  .container-custom-md,
+  .container-custom-sm {
+    max-width: 930px;
+  }
+}
 
 /* FONTS */
 @font-face {
