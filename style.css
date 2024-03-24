@@ -744,7 +744,7 @@ img.logo-footer:hover {
   background-color: #fff;
 }
 .no-scroll {
-  overflow: visible;
+  overflow: hidden;
 }
 /* VIDEO MODAL */
 
